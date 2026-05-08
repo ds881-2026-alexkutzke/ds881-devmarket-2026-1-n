@@ -1,2 +1,1 @@
-André Leme
-
+Eduardo Kaique Alberico | Product Owner | https://github.com/EduKaique
