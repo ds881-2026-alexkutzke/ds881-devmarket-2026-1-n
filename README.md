@@ -1,5 +1,7 @@
 # DevMarket
 
+[![CI Status](https://github.com/ds881-2026-alexkutzke/ds881-devmarket-2026-1-n/actions/workflows/ci.yml/badge.svg)](https://github.com/ds881-2026-alexkutzke/ds881-devmarket-2026-1-n/actions/workflows/ci.yml)
+
 ## Convenções de Arquitetura
 
 **Estrutura de Pastas e Nomenclatura:**
