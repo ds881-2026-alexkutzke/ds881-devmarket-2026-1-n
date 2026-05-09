@@ -6,4 +6,5 @@ Joelinton Dorte | Developer | https://github.com/joeaustein
 Milena Calegari Dourado | Dev | https://github.com/milena579
 Kauan Kelvin Alves Macedo | Developer | https://github.com/kauan-macedo
 Arthur Henrique Deretti | Developer | https://github.com/Arthur-Deretti
+Ingrid Cristine Rocha | Dev | https://github.com/ingridcriistine
 Rhuan Martins | Developer | https://github.com/rhuwp
