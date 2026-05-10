@@ -9,3 +9,4 @@ Arthur Henrique Deretti | Developer | https://github.com/Arthur-Deretti
 Ingrid Cristine Rocha | Dev | https://github.com/ingridcriistine
 Rhuan Martins | Developer | https://github.com/rhuwp
 João Pedro Nossol | Developer | https://github.com/CaixoDarksixo
+Marcos Renato Rocha de Medeiros | Dev | https://github.com/marcosrenatodev
