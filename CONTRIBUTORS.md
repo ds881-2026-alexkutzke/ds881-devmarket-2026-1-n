@@ -10,3 +10,4 @@ Ingrid Cristine Rocha | Dev | https://github.com/ingridcriistine
 Rhuan Martins | Developer | https://github.com/rhuwp
 João Pedro Nossol | Developer | https://github.com/CaixoDarksixo
 Marcos Renato Rocha de Medeiros | Dev | https://github.com/marcosrenatodev
+Ender Efrain Ruiz Carrasco | Dev | https://github.com/eruiz19
