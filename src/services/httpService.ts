@@ -12,7 +12,6 @@ export async function httpGet(path: string) {
 
     return await response.json();
   } catch (error) {
-    console.error('Erro na requisição HTTP:', error);
     throw error;
   }
 }
