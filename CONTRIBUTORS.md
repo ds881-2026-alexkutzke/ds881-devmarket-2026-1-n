@@ -1,40 +1,20 @@
-\# Contributors
+# Contributors
 
-
-
-\- Eduardo Kaique Alberico — Product Owner — \[GitHub](https://github.com/EduKaique)
-
-\- João Pedro Gonçalves Cardoso — Product Owner — \[GitHub](https://github.com/MrJPedro)
-
-\- Joelinton Dorte — Developer — \[GitHub](https://github.com/joeaustein)
-
-\- Milena Calegari Dourado — Dev — \[GitHub](https://github.com/milena579)
-
-\- Kauan Kelvin Alves Macedo — Developer — \[GitHub](https://github.com/kauan-macedo)
-
-\- Arthur Henrique Deretti — Developer — \[GitHub](https://github.com/Arthur-Deretti)
-
-\- Ingrid Cristine Rocha — Dev — \[GitHub](https://github.com/ingridcriistine)
-
-\- Rhuan Martins — Developer — \[GitHub](https://github.com/rhuwp)
-
-\- João Pedro Nossol — Developer — \[GitHub](https://github.com/CaixoDarksixo)
-
-\- Marcos Renato Rocha de Medeiros — Dev — \[GitHub](https://github.com/marcosrenatodev)
-
-\- Ender Efrain Ruiz Carrasco — Dev — \[GitHub](https://github.com/eruiz19)
-
-\- Yasmin Calderon — Developer — \[GitHub](https://github.com/yasmin-calderon)
-
-\- Matheus Nunes Santana — Developer — \[GitHub](https://github.com/Humanaice)
-
-\- Thiago Avanço Zambon — Dev — \[GitHub](https://github.com/GUINH0-0)
-
-\- Gabriel de Paula Brasil — Dev — \[GitHub](https://github.com/xXbrasilXx)
-
-\- Tomaz Cantarelli Xavier — Dev — \[GitHub](https://github.com/tomazcx)
-
-\- Henrique Kenji Kushima Ramos — Dev — \[GitHub](https://github.com/HenriqueRamos00)
-
-\- André Luiz Leme — Dev — \[GitHub](https://github.com/andrelleme)
-
+- Eduardo Kaique Alberico — Product Owner — [GitHub](https://github.com/EduKaique)
+- João Pedro Gonçalves Cardoso — Product Owner — [GitHub](https://github.com/MrJPedro)
+- Joelinton Dorte — Developer — [GitHub](https://github.com/joeaustein)
+- Milena Calegari Dourado — Dev — [GitHub](https://github.com/milena579)
+- Kauan Kelvin Alves Macedo — Developer — [GitHub](https://github.com/kauan-macedo)
+- Arthur Henrique Deretti — Developer — [GitHub](https://github.com/Arthur-Deretti)
+- Ingrid Cristine Rocha — Dev — [GitHub](https://github.com/ingridcriistine)
+- Rhuan Martins — Developer — [GitHub](https://github.com/rhuwp)
+- João Pedro Nossol — Developer — [GitHub](https://github.com/CaixoDarksixo)
+- Marcos Renato Rocha de Medeiros — Dev — [GitHub](https://github.com/marcosrenatodev)
+- Ender Efrain Ruiz Carrasco — Dev — [GitHub](https://github.com/eruiz19)
+- Yasmin Calderon — Developer — [GitHub](https://github.com/yasmin-calderon)
+- Matheus Nunes Santana — Developer — [GitHub](https://github.com/Humanaice)
+- Thiago Avanço Zambon — Dev — [GitHub](https://github.com/GUINH0-0)
+- Gabriel de Paula Brasil — Dev — [GitHub](https://github.com/xXbrasilXx)
+- Tomaz Cantarelli Xavier — Dev — [GitHub](https://github.com/tomazcx)
+- Henrique Kenji Kushima Ramos — Dev — [GitHub](https://github.com/HenriqueRamos00)
+- André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
