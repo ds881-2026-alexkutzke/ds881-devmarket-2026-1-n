@@ -23,3 +23,4 @@
 - Luiz Henrique Schecheli Bussolo — Dev — [GitHub](https://github.com/Luiz-Bussolo)
 - André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
 - Maria Eduarda Ferreira Carvalho — Dev — [GitHub](https://github.com/mariaeferreirac)
+- Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
