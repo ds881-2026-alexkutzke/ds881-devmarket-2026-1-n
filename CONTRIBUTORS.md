@@ -1,44 +1,40 @@
-Fica assim corretamente:
-
-
-
 \# Contributors
 
 
 
-\- Eduardo Kaique Alberico | Product Owner | \[GitHub](https://github.com/EduKaique)
+\- Eduardo Kaique Alberico — Product Owner — \[GitHub](https://github.com/EduKaique)
 
-\- João Pedro Gonçalves Cardoso | Product Owner | \[GitHub](https://github.com/MrJPedro)
+\- João Pedro Gonçalves Cardoso — Product Owner — \[GitHub](https://github.com/MrJPedro)
 
-\- Joelinton Dorte | Developer | \[GitHub](https://github.com/joeaustein)
+\- Joelinton Dorte — Developer — \[GitHub](https://github.com/joeaustein)
 
-\- Milena Calegari Dourado | Dev | \[GitHub](https://github.com/milena579)
+\- Milena Calegari Dourado — Dev — \[GitHub](https://github.com/milena579)
 
-\- Kauan Kelvin Alves Macedo | Developer | \[GitHub](https://github.com/kauan-macedo)
+\- Kauan Kelvin Alves Macedo — Developer — \[GitHub](https://github.com/kauan-macedo)
 
-\- Arthur Henrique Deretti | Developer | \[GitHub](https://github.com/Arthur-Deretti)
+\- Arthur Henrique Deretti — Developer — \[GitHub](https://github.com/Arthur-Deretti)
 
-\- Ingrid Cristine Rocha | Dev | \[GitHub](https://github.com/ingridcriistine)
+\- Ingrid Cristine Rocha — Dev — \[GitHub](https://github.com/ingridcriistine)
 
-\- Rhuan Martins | Developer | \[GitHub](https://github.com/rhuwp)
+\- Rhuan Martins — Developer — \[GitHub](https://github.com/rhuwp)
 
-\- João Pedro Nossol | Developer | \[GitHub](https://github.com/CaixoDarksixo)
+\- João Pedro Nossol — Developer — \[GitHub](https://github.com/CaixoDarksixo)
 
-\- Marcos Renato Rocha de Medeiros | Dev | \[GitHub](https://github.com/marcosrenatodev)
+\- Marcos Renato Rocha de Medeiros — Dev — \[GitHub](https://github.com/marcosrenatodev)
 
-\- Ender Efrain Ruiz Carrasco | Dev | \[GitHub](https://github.com/eruiz19)
+\- Ender Efrain Ruiz Carrasco — Dev — \[GitHub](https://github.com/eruiz19)
 
-\- Yasmin Calderon | Developer | \[GitHub](https://github.com/yasmin-calderon)
+\- Yasmin Calderon — Developer — \[GitHub](https://github.com/yasmin-calderon)
 
-\- Matheus Nunes Santana | Developer | \[GitHub](https://github.com/Humanaice)
+\- Matheus Nunes Santana — Developer — \[GitHub](https://github.com/Humanaice)
 
-\- Thiago Avanço Zambon | Dev | \[GitHub](https://github.com/GUINH0-0)
+\- Thiago Avanço Zambon — Dev — \[GitHub](https://github.com/GUINH0-0)
 
-\- Gabriel de Paula Brasil | Dev | \[GitHub](https://github.com/xXbrasilXx)
+\- Gabriel de Paula Brasil — Dev — \[GitHub](https://github.com/xXbrasilXx)
 
-\- Tomaz Cantarelli Xavier | Dev | \[GitHub](https://github.com/tomazcx)
+\- Tomaz Cantarelli Xavier — Dev — \[GitHub](https://github.com/tomazcx)
 
-\- Henrique Kenji Kushima Ramos | Dev | \[GitHub](https://github.com/HenriqueRamos00)
+\- Henrique Kenji Kushima Ramos — Dev — \[GitHub](https://github.com/HenriqueRamos00)
 
-\- André Luiz Leme | Dev | \[GitHub](https://github.com/andrelleme)
+\- André Luiz Leme — Dev — \[GitHub](https://github.com/andrelleme)
 
