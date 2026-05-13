@@ -9,10 +9,10 @@ const CAMINHO_APP_TSX = path.join(PASTA_SRC, 'App.tsx');
 describe('Arquitetura — Roteamento', () => {
     test('App.tsx não deve importar arquivos da pasta pages diretamente', () => {
         // Verifica se o App.tsx existe (previne erros caso o arquivo seja renomeado futuramente)
-        if (!fs.existsSync(CAMINHO_APP_TSX)) {
-            console.warn('Arquivo App.tsx não encontrado. Teste ignorado.');
-            return;
-        }
+        expect(
+        fs.existsSync(CAMINHO_APP_TSX),
+            'Arquivo App.tsx não encontrado na raiz do src. O teste de arquitetura não pode prosseguir.'
+        ).toBe(true);
 
         // Lê o conteúdo do App.tsx
         const conteudo = fs.readFileSync(CAMINHO_APP_TSX, 'utf-8');
