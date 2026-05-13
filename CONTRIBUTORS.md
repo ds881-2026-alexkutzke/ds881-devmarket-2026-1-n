@@ -23,3 +23,4 @@
 - Luiz Henrique Schecheli Bussolo — Dev — [GitHub](https://github.com/Luiz-Bussolo)
 - André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
 - João Victor Mota Machado - Scrum Master - [GitHub](https://github.com/jvmotadev)
+- Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
