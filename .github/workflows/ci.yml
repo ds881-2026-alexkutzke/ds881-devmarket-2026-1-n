@@ -1,0 +1,107 @@
+name: CI/CD
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read       
+  pages: write         
+  id-token: write      
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
+
+jobs:
+  # JOB 1: LINT
+  # Valida o código com ESLint conforme as regras configuradas no projeto
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Executar ESLint
+        run: npm run lint
+
+  # JOB 2: TEST
+  # Roda os testes do Vitest (incluindo os testes de arquitetura) em modo single-run (sem watch)
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Executar testes (Vitest, single-run)
+        run: npm run test -- --run
+
+  # JOB 3: BUILD
+  # Gera os arquivos estáticos da aplicação. Faz upload do artefato para o job deployar no GitHub Pages.
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build da aplicação (Vite)
+        run: npm run build
+
+      - name: Configurar GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+
+      - name: Upload do artefato para o Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  # JOB 4: DEPLOY
+  # Publica o artefato gerado pelo job de build no GitHub Pages
+  # Roda APENAS em push na branch main (não em PRs)
+  # Depende dos três jobs anteriores: se algum falhar, não há deploy
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: [lint, test, build]
+    runs-on: ubuntu-latest
+    # Só faz deploy em push na main (PRs apenas validam)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
