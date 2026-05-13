@@ -12,3 +12,5 @@ João Pedro Nossol | Developer | https://github.com/CaixoDarksixo
 Marcos Renato Rocha de Medeiros | Dev | https://github.com/marcosrenatodev
 Ender Efrain Ruiz Carrasco | Dev | https://github.com/eruiz19
 Vitor Adriel D. Espinoza Moya | Dev | https://github.com/VitorEspinoza
+Tomaz Cantarelli Xavier | Dev | https://github.com/tomazcx
+Henrique Kenji Kushima Ramos | Dev | https://github.com/HenriqueRamos00
