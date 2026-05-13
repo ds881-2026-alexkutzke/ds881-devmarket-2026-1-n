@@ -1,4 +1,4 @@
-# Contributors
+## Contributors
 
 - Eduardo Kaique Alberico — Product Owner — [GitHub](https://github.com/EduKaique)
 - João Pedro Gonçalves Cardoso — Product Owner — [GitHub](https://github.com/MrJPedro)
@@ -11,10 +11,14 @@
 - João Pedro Nossol — Developer — [GitHub](https://github.com/CaixoDarksixo)
 - Marcos Renato Rocha de Medeiros — Dev — [GitHub](https://github.com/marcosrenatodev)
 - Ender Efrain Ruiz Carrasco — Dev — [GitHub](https://github.com/eruiz19)
+- Vitor Adriel D. Espinoza Moya — Dev — [GitHub](https://github.com/VitorEspinoza)
+- João Gabriel Fanti Alves — Dev — [GitHub](https://github.com/JoaoFanti-UFPR)
 - Yasmin Calderon — Developer — [GitHub](https://github.com/yasmin-calderon)
 - Matheus Nunes Santana — Developer — [GitHub](https://github.com/Humanaice)
 - Thiago Avanço Zambon — Dev — [GitHub](https://github.com/GUINH0-0)
 - Gabriel de Paula Brasil — Dev — [GitHub](https://github.com/xXbrasilXx)
 - Tomaz Cantarelli Xavier — Dev — [GitHub](https://github.com/tomazcx)
 - Henrique Kenji Kushima Ramos — Dev — [GitHub](https://github.com/HenriqueRamos00)
+- Mateus de Castro Xavier — Tech Lead — [GitHub](https://github.com/Mateus-X)
+- Luiz Henrique Schecheli Bussolo — Dev — [GitHub](https://github.com/Luiz-Bussolo)
 - André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
