@@ -16,3 +16,4 @@ Thiago Avanço Zambon | Dev | https://github.com/GUINH0-0
 Gabriel de Paula Brasil | Dev | https://github.com/xXbrasilXx
 Tomaz Cantarelli Xavier | Dev | https://github.com/tomazcx
 Henrique Kenji Kushima Ramos | Dev | https://github.com/HenriqueRamos00
+Mateus de Castro Xavier | Tech Lead | https://github.com/Mateus-X
