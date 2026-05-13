@@ -11,3 +11,4 @@ Rhuan Martins | Developer | https://github.com/rhuwp
 João Pedro Nossol | Developer | https://github.com/CaixoDarksixo
 Marcos Renato Rocha de Medeiros | Dev | https://github.com/marcosrenatodev
 Ender Efrain Ruiz Carrasco | Dev | https://github.com/eruiz19
+Matheus Nunes Santana | Developer | https://github.com/Humanaice
