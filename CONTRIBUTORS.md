@@ -23,4 +23,8 @@
 - Luiz Henrique Schecheli Bussolo — Dev — [GitHub](https://github.com/Luiz-Bussolo)
 - André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
 - Maria Eduarda Ferreira Carvalho — Dev — [GitHub](https://github.com/mariaeferreirac)
+- João Victor Mota Machado - Scrum Master - [GitHub](https://github.com/jvmotadev)
 - Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
+- Fellipe Gabriel Gonçalves de Araújo — Tech Lead — [GitHub](https://github.com/FellipeGabriel)
+- João Victor Leal Gonçalves - Dev - [GitHub](https://github.com/joao-0213)
+- Anna Luiza Mariano - Tech Lead - [GitHub](https://github.com/annaluiza29)
