@@ -24,3 +24,6 @@
 - André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
 - João Victor Mota Machado - Scrum Master - [GitHub](https://github.com/jvmotadev)
 - Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
+- Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
+- Fellipe Gabriel Gonçalves de Araújo — Tech Lead — [GitHub](https://github.com/FellipeGabriel)
+- João Victor Leal Gonçalves - Dev - [GitHub](https://github.com/joao-0213)
