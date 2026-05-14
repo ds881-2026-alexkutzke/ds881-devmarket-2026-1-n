@@ -27,3 +27,4 @@
 - Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
 - Fellipe Gabriel Gonçalves de Araújo — Tech Lead — [GitHub](https://github.com/FellipeGabriel)
 - João Victor Leal Gonçalves - Dev - [GitHub](https://github.com/joao-0213)
+- Anna Luiza Mariano | Tech Lead | https://github.com/annaluiza29
