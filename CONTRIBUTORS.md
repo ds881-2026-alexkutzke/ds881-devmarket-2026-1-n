@@ -1,24 +1,32 @@
-Eduardo Kaique Alberico | Product Owner | https://github.com/EduKaique
-João Pedro Gonçalves Cardoso | Product Owner | https://github.com/MrJPedro
-Joelinton Dorte         | Developer     | https://github.com/joeaustein
-Milena Calegari Dourado | Dev           | https://github.com/milena579
-Joelinton Dorte | Developer | https://github.com/joeaustein
-Milena Calegari Dourado | Dev | https://github.com/milena579
-Kauan Kelvin Alves Macedo | Developer | https://github.com/kauan-macedo
-Arthur Henrique Deretti | Developer | https://github.com/Arthur-Deretti
-Ingrid Cristine Rocha | Dev | https://github.com/ingridcriistine
-Rhuan Martins | Developer | https://github.com/rhuwp
-João Pedro Nossol | Developer | https://github.com/CaixoDarksixo
-Marcos Renato Rocha de Medeiros | Dev | https://github.com/marcosrenatodev
-Ender Efrain Ruiz Carrasco | Dev | https://github.com/eruiz19
-Angelo Chiavegatti Prebianca | Tech Lead | https://github.com/AngeloPre
-Vitor Adriel D. Espinoza Moya | Dev | https://github.com/VitorEspinoza
-João Gabriel Fanti Alves | Dev | https://github.com/JoaoFanti-UFPR
-Yasmin Calderon | Developer | https://github.com/yasmin-calderon
-Matheus Nunes Santana | Developer | https://github.com/Humanaice
-Thiago Avanço Zambon | Dev | https://github.com/GUINH0-0
-Gabriel de Paula Brasil | Dev | https://github.com/xXbrasilXx
-Tomaz Cantarelli Xavier | Dev | https://github.com/tomazcx
-Henrique Kenji Kushima Ramos | Dev | https://github.com/HenriqueRamos00
-Mateus de Castro Xavier | Tech Lead | https://github.com/Mateus-X
-Luiz Henrique Schecheli Bussolo | Dev | https://github.com/Luiz-Bussolo
+## Contributors
+
+- Eduardo Kaique Alberico — Product Owner — [GitHub](https://github.com/EduKaique)
+- João Pedro Gonçalves Cardoso — Product Owner — [GitHub](https://github.com/MrJPedro)
+- Joelinton Dorte — Developer — [GitHub](https://github.com/joeaustein)
+- Milena Calegari Dourado — Dev — [GitHub](https://github.com/milena579)
+- Kauan Kelvin Alves Macedo — Developer — [GitHub](https://github.com/kauan-macedo)
+- Arthur Henrique Deretti — Developer — [GitHub](https://github.com/Arthur-Deretti)
+- Ingrid Cristine Rocha — Dev — [GitHub](https://github.com/ingridcriistine)
+- Rhuan Martins — Developer — [GitHub](https://github.com/rhuwp)
+- João Pedro Nossol — Developer — [GitHub](https://github.com/CaixoDarksixo)
+- Marcos Renato Rocha de Medeiros — Dev — [GitHub](https://github.com/marcosrenatodev)
+- Ender Efrain Ruiz Carrasco — Dev — [GitHub](https://github.com/eruiz19)
+- Vitor Adriel D. Espinoza Moya — Dev — [GitHub](https://github.com/VitorEspinoza)
+- João Gabriel Fanti Alves — Dev — [GitHub](https://github.com/JoaoFanti-UFPR)
+- Yasmin Calderon — Developer — [GitHub](https://github.com/yasmin-calderon)
+- Matheus Nunes Santana — Developer — [GitHub](https://github.com/Humanaice)
+- Thiago Avanço Zambon — Dev — [GitHub](https://github.com/GUINH0-0)
+- Gabriel de Paula Brasil — Dev — [GitHub](https://github.com/xXbrasilXx)
+- Tomaz Cantarelli Xavier — Dev — [GitHub](https://github.com/tomazcx)
+- Henrique Kenji Kushima Ramos — Dev — [GitHub](https://github.com/HenriqueRamos00)
+- Mateus de Castro Xavier — Tech Lead — [GitHub](https://github.com/Mateus-X)
+- Luiz Henrique Schecheli Bussolo — Dev — [GitHub](https://github.com/Luiz-Bussolo)
+- André Luiz Leme — Dev — [GitHub](https://github.com/andrelleme)
+- Rafael Luis Pomponio - Dev - [GitHub](https://github.com/pompssss)
+- Maria Eduarda Ferreira Carvalho — Dev — [GitHub](https://github.com/mariaeferreirac)
+- João Victor Mota Machado - Scrum Master - [GitHub](https://github.com/jvmotadev)
+- Luan Lourenço Sauer - Dev - [GitHub](https://github.com/luansauer)
+- Fellipe Gabriel Gonçalves de Araújo — Tech Lead — [GitHub](https://github.com/FellipeGabriel)
+- João Victor Leal Gonçalves - Dev - [GitHub](https://github.com/joao-0213)
+- Anna Luiza Mariano 
+- Angelo Chiavegatti Prebianca - Tech Lead - [GitHub](https://github.com/AngeloPre)
