@@ -36,8 +36,6 @@ jobs:
                 username: author
               });
 
-              console.log(`${author} autorizado`);
-
             } catch {
 
               await github.rest.issues.createComment({
