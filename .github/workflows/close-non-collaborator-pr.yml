@@ -22,7 +22,7 @@ jobs:
     steps:
       # A action github-script executa JavaScript usando a API do GitHub
       - name: Verificar se autor é colaborador
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const author = context.payload.pull_request.user.login;
