@@ -1,5 +1,44 @@
 @import "tailwindcss";
 
+/* =============================================================================
+ * DEVMARKET — Design Tokens
+ *
+ * Cores semânticas declaradas via @theme do Tailwind 
+ * Escala: 50 (mais claro) → 950 (mais escuro)
+ * ============================================================================= */
+ 
+@theme {
+ 
+  /* PRIMARY — Cor principal da marca DevMarket (azul-índigo) */
+  --color-primary-50:  #eef2ff;  /* Fundo suave, badges                         */
+  --color-primary-300: #a5b4fc;  /* Bordas, ícones inativos                     */
+  --color-primary-500: #6366f1;  /* Cor base da marca                           */
+  --color-primary-700: #4338ca;  /* Botão primário, hover                       */
+  --color-primary-950: #1e1b4b;  /* Fundo escuro, navbar dark                   */
+ 
+  /* SUCCESS — Verde de preço com desconto e ações positivas */
+  --color-success-50:  #ecfdf5;  /* Fundo de toast / banner de sucesso          */
+  --color-success-300: #6ee7b7;  /* Ícone de desconto, check                    */
+  --color-success-500: #10b981;  /* Cor base de sucesso                         */
+  --color-success-700: #047857;  /* Texto de preço com desconto (ex: R$ 49,90)  */
+  --color-success-950: #022c22;  /* Contraste máximo em tema escuro             */
+ 
+  /* DANGER — Vermelho de preço tachado e estados de erro */
+  --color-danger-50:  #fff1f2;   /* Fundo de alerta de erro                     */
+  --color-danger-300: #fda4af;   /* Ícone de aviso, estado de erro leve         */
+  --color-danger-500: #f43f5e;   /* Cor base de perigo                          */
+  --color-danger-700: #be123c;   /* Texto de preço tachado (ex: De R$ 99,90)    */
+  --color-danger-950: #4c0519;   /* Contraste máximo em tema escuro             */
+ 
+  /* MUTED — Cinza neutro para textos secundários, bordas e fundos */
+  --color-muted-50:  #fafafa;    /* Fundo alternado de seção                    */
+  --color-muted-300: #d4d4d8;    /* Bordas, divisores                           */
+  --color-muted-500: #71717a;    /* Cor base neutra                             */
+  --color-muted-700: #3f3f46;    /* Texto secundário (subtítulo, descrição)     */
+  --color-muted-950: #09090b;    /* Texto de máximo contraste                  */
+ 
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
