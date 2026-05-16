@@ -1,0 +1,55 @@
+name: Bloquear PRs externos
+
+on:
+  pull_request_target:
+    types:
+      - opened
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  # JOB 1: VALIDAÇÃO DE AUTOR
+  # Verifica se o usuário que abriu o PR é colaborador do repositório
+  # Caso não seja:
+  # - adiciona comentário automático
+  # - fecha o Pull Request
+  validate-pr-author:
+    name: Validar autor do PR
+    runs-on: ubuntu-latest
+
+    steps:
+      # A action github-script executa JavaScript usando a API do GitHub
+      - name: Verificar se autor é colaborador
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const association =
+              context.payload.pull_request.author_association;
+
+            console.log("Associação:", association);
+
+            const allowed = [
+              "OWNER",
+              "MEMBER",
+              "COLLABORATOR"
+            ];
+
+            if (!allowed.includes(association)) {
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body:
+                  "PR fechado automaticamente. Apenas colaboradores podem abrir Pull Requests."
+              });
+
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                state: "closed"
+              });
+            }
