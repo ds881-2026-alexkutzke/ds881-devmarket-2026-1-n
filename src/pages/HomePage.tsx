@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getFirstProduct } from '../services/productService';
 import type { Product } from '../types/product.types.ts';
-
+import { formatCurrency } from '../utils/formatCurrency';
 const HomePage = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const [erro, setErro] = useState(false);
@@ -24,10 +24,10 @@ const HomePage = () => {
     <main>
       <h1>PoC: Conexão com API</h1>
 
-      <div className="border border-[var(--border)] p-4">
+     <div className="border border-[var(--border)] p-4">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
-        <p>Preço: ${product.price}</p>
+        <p>Preço: {formatCurrency(product.price)}</p>
       </div>
 
       {/* Exemplo de utilities Tailwind:
