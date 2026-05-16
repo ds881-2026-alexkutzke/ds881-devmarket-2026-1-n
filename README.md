@@ -2,6 +2,8 @@
 
 [![CI Status](https://github.com/ds881-2026-alexkutzke/ds881-devmarket-2026-1-n/actions/workflows/ci.yml/badge.svg)](https://github.com/ds881-2026-alexkutzke/ds881-devmarket-2026-1-n/actions/workflows/ci.yml)
 
+## Acesse o protótipo das telas nesse [LINK](https://balsamiq.cloud/s806n0/pamvp6b/rA310)
+
 ## Convenções de Arquitetura
 
 **Estrutura de Pastas e Nomenclatura:**
