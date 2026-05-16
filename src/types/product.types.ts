@@ -1,3 +1,5 @@
+import type { Category } from "./category.types";
+
 export interface Product {
   id: number;
   title: string;
@@ -7,7 +9,7 @@ export interface Product {
   rating: number;
   stock: number;
   brand: string;
-  category: string;
+  category: Category['slug']; //Pega o slug da Categoria;
   thumbnail: string;
   images: string[];
 }
