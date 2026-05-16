@@ -24,11 +24,26 @@ const HomePage = () => {
     <main>
       <h1>PoC: Conexão com API</h1>
 
-      <div className="product-card">
+      <div className="border border-[var(--border)] p-4">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <p>Preço: ${product.price}</p>
       </div>
+
+      {/* Exemplo de utilities Tailwind:
+          - bg-red-500       => background vermelho
+          - text-white       => cor do texto
+          - text-xl          => tamanho do texto (xs, sm, base, lg, xl, 2xl...)
+          - font-bold        => peso da fonte
+          - underline        => sublinhado
+          - px-6 py-2        => padding horizontal/vertical
+          - mt-4             => margin top (mt, mb, ml, mr, mx, my)
+          - rounded-lg       => bordas arredondadas
+          - hover:bg-red-700 => muda a cor no hover
+      */}
+      <button className="bg-red-500 text-white text-xl font-bold underline px-6 py-2 mt-4 rounded-lg hover:bg-red-700">
+        Exemplo Tailwind
+      </button>
     </main>
   );
 };

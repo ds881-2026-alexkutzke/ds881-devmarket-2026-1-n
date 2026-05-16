@@ -1,7 +1,7 @@
 name: Bloquear PRs externos
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
 
@@ -25,30 +25,30 @@ jobs:
         uses: actions/github-script@v9
         with:
           script: |
-            const author = context.payload.pull_request.user.login;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
+            const association =
+              context.payload.pull_request.author_association;
 
-            try {
-              await github.rest.repos.checkCollaborator({
-                owner,
-                repo,
-                username: author
-              });
+            console.log("Associação:", association);
 
-            } catch {
+            const allowed = [
+              "OWNER",
+              "MEMBER",
+              "COLLABORATOR"
+            ];
+
+            if (!allowed.includes(association)) {
 
               await github.rest.issues.createComment({
-                owner,
-                repo,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
                 issue_number: context.issue.number,
                 body:
                   "PR fechado automaticamente. Apenas colaboradores podem abrir Pull Requests."
               });
 
               await github.rest.pulls.update({
-                owner,
-                repo,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
                 pull_number: context.issue.number,
                 state: "closed"
               });
