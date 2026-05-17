@@ -1,7 +1,8 @@
 import { routes } from './routes';
 
 function App() {
-  const currentPath = window.location.pathname;
+  const base = import.meta.env.BASE_URL; // '/dev-market/' em prod, '/' em local
+  const currentPath = window.location.pathname.replace(base, '/');
   const route = routes.find(r => r.path === currentPath);
 
   return (
