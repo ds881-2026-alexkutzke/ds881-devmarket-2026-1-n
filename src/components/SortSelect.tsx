@@ -1,6 +1,11 @@
-import { Select, MenuItem } from "@mui/material";
-import type { SelectChangeEvent } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 
+import type { SelectChangeEvent } from "@mui/material";
 export type SortOption =
   | "relevance"
   | "price-asc"
