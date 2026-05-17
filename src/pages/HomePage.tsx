@@ -17,7 +17,7 @@ const HomePage = () => {
   }
 
   if (!product) {
-    return <div>Carregando prova de conceito...</div>;
+    return <div>Carregando prova de conceito..</div>;
   }
 
   return (
