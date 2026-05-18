@@ -15,8 +15,11 @@
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^9.0.1",
     "@tailwindcss/vite": "^4.3.0",
+    "i18next": "^26.2.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-i18next": "^17.0.8",
+    "react-router-dom": "^7.15.1",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
