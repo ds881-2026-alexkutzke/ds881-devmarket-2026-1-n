@@ -1,0 +1,10 @@
+{
+	"home": {
+		"title": "PoC: API Connection",
+		"loading": "Loading proof of concept..",
+		"error": "Error loading product.",
+		"priceLabel": "Price:",
+		"exampleButton": "Tailwind example",
+		"toggleLanguage": "Switch language"
+	}
+}
