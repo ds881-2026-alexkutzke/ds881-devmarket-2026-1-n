@@ -1,10 +1,35 @@
 {
-	"home": {
-		"title": "PoC: Conexão com API",
-		"loading": "Carregando prova de conceito..",
-		"error": "Erro ao carregar produto.",
-		"priceLabel": "Preço:",
-		"exampleButton": "Exemplo Tailwind",
-		"toggleLanguage": "Mudar idioma"
-	}
+  "pages": {
+    "home": {
+      "title": "PoC: Conexão com API",
+      "loading": "Carregando prova de conceito...",
+      "error": "Erro ao carregar produto.",
+      "priceLabel": "Preço:",
+      "exampleButton": "Exemplo Tailwind"
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "description": "A página que você procura não existe ou foi movida.",
+      "backHome": "Voltar para a home"
+    }
+  },
+  "components": {
+    "languageToggle": {
+      "toggleLanguage": "Mudar idioma"
+    },
+    "sortSelect": {
+      "label": "Ordenar por",
+      "options": {
+        "relevance": "Relevância",
+        "priceAsc": "Preço: menor primeiro",
+        "priceDesc": "Preço: maior primeiro",
+        "ratingDesc": "Avaliação: maior primeiro",
+        "ratingAsc": "Avaliação: menor primeiro"
+      }
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro"
+  }
 }

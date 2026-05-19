@@ -7,7 +7,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'pt-BR',
-    debug: true,
+    debug: import.meta.env.DEV,
     resources: {
       'pt-BR': {
         translation: ptBR,
