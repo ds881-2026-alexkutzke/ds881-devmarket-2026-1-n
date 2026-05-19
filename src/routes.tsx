@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   type RouteObject,
 } from 'react-router-dom';
 
@@ -18,4 +18,4 @@ export const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+export const router = createHashRouter(routes);
