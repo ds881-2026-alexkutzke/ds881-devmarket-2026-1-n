@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getFirstProduct } from '../services/productService.ts';
-import type { Product } from '../types/product.types.ts';
+import { useEffect, useState } from "react";
+import { getFirstProduct } from "@/services/productService";
+import type { Product } from "@/types/product.types";
 
 const HomePage = () => {
   const [product, setProduct] = useState<Product | null>(null);
@@ -8,7 +8,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getFirstProduct()
-      .then(data => setProduct(data))
+      .then((data) => setProduct(data))
       .catch(() => setErro(true));
   }, []);
 
@@ -23,7 +23,6 @@ const HomePage = () => {
   return (
     <main>
       <h1>Exemplo notfound</h1>
-
     </main>
   );
 };

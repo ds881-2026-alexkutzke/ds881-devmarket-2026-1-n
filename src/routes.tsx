@@ -1,19 +1,15 @@
-import {
-  createHashRouter,
-  type RouteObject,
-} from 'react-router-dom';
+import { createHashRouter, type RouteObject } from "react-router-dom";
 
-import HomePage from './pages/HomePage.tsx';
-import NotFoundPage from './pages/NotFoundPage.tsx';
-
+import HomePage from "@/pages/HomePage";
+import NotFoundPage from "@/pages/NotFoundPage";
 
 export const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <HomePage />,
   },
   {
-    path: '*',
+    path: "*",
     element: <NotFoundPage />,
   },
 ];
