@@ -1,10 +1,9 @@
-version: '3.9'
-
 services:
-  devmarket:
-    image: node:22-alpine
-    container_name: devmarket-app
-    working_dir: /app
+  dev:
+    build:
+      context: .
+      target: dev
+    container_name: devmarket-dev
     restart: unless-stopped
     ports:
       - "5173:5173"
@@ -15,17 +14,26 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - NODE_ENV=development
       - FAST_REFRESH=true
-    command: sh -c "if [ ! -d node_modules ]; then npm install; fi && npm run dev -- --host 0.0.0.0"
     networks:
       - devmarket-network
     deploy:
       resources:
         limits:
-          cpus: '3.0'
+          cpus: "3.0"
           memory: 3G
         reservations:
-          cpus: '0.5'
+          cpus: "0.5"
           memory: 512M
+
+  prod:
+    build:
+      context: .
+      target: prod
+    container_name: devmarket-prod
+    ports:
+      - "8080:80"
+    networks:
+      - devmarket-network
 
 networks:
   devmarket-network:
