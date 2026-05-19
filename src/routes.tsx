@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   type RouteObject,
 } from 'react-router-dom';
 
@@ -18,6 +18,4 @@ export const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes, {
-  basename: import.meta.env.BASE_URL,
-});
+export const router = createHashRouter(routes);
