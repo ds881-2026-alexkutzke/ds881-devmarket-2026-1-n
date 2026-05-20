@@ -1,4 +1,5 @@
 import type { Category } from "./category.types";
+import type { Review } from "./review.types";
 
 export interface Product {
   id: number;
@@ -12,6 +13,7 @@ export interface Product {
   category: Category['slug']; //Pega o slug da Categoria;
   thumbnail: string;
   images: string[];
+  reviews: Review[];
 }
 
 // Opcional: Interface para quando a API retornar a lista completa (ex: /products)

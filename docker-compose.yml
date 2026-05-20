@@ -1,9 +1,9 @@
-version: "3.9"
-
 services:
-  devmarket:
-    build: .
-    container_name: devmarket-app
+  dev:
+    build:
+      context: .
+      target: dev
+    container_name: devmarket-dev
     restart: unless-stopped
     ports:
       - "5173:5173"
@@ -24,6 +24,16 @@ services:
         reservations:
           cpus: "0.5"
           memory: 512M
+
+  prod:
+    build:
+      context: .
+      target: prod
+    container_name: devmarket-prod
+    ports:
+      - "8080:80"
+    networks:
+      - devmarket-network
 
 networks:
   devmarket-network:

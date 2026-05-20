@@ -1,11 +1,30 @@
+# Git / VCS
 .git
-.vscode
-.dockerignore
 .gitignore
-.env
-config
-build
+
+# Editor / IDE
+.vscode
+.idea
+
+# Dependências e builds (instalados/gerados dentro da imagem)
 node_modules
-docker-compose.yaml
+dist
+build
+coverage
+
+# Variáveis de ambiente — nunca vão pra imagem
+.env
+.env.*
+
+# Docker (a própria imagem não precisa)
 Dockerfile
-README.md
+.dockerignore
+docker-compose.yml
+docker-compose.yaml
+
+# CI / configs externas ao runtime
+.github
+.tool-versions
+
+# Docs
+*.md
