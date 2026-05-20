@@ -26,6 +26,9 @@
         "ratingDesc": "Avaliação: maior primeiro",
         "ratingAsc": "Avaliação: menor primeiro"
       }
+    },
+    "errorState": {
+      "retry": "Tentar novamente"
     }
   },
   "common": {
