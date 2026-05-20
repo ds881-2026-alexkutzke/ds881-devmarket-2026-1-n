@@ -108,7 +108,7 @@ const Carousel = ({ children }: CarouselProps) => {
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
       const maxItemIndex = Math.round(maxScrollLeft / scrollStep);
 
-      let targetItemIndex = 0;
+      let targetItemIndex;
 
       if (childrenCount <= dotsCount) {
         targetItemIndex = index;
@@ -150,8 +150,7 @@ const Carousel = ({ children }: CarouselProps) => {
         <div
           ref={scrollRef}
           onScroll={handleScrollEvent}
-          className="flex overflow-x-auto gap-4 scroll-smooth w-full py-4 px-2 no-scrollbar *:shrink-0"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className="flex overflow-x-auto gap-4 scroll-smooth w-full py-4 px-2 no-scrollbar *:shrink-0 no-scrollbar"
         >
           {children}
         </div>
