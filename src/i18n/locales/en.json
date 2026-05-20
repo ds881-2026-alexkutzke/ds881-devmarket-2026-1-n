@@ -1,10 +1,35 @@
 {
-	"home": {
-		"title": "PoC: API Connection",
-		"loading": "Loading proof of concept..",
-		"error": "Error loading product.",
-		"priceLabel": "Price:",
-		"exampleButton": "Tailwind example",
-		"toggleLanguage": "Switch language"
-	}
+  "pages": {
+    "home": {
+      "title": "PoC: API Connection",
+      "loading": "Loading proof of concept...",
+      "error": "Error loading product.",
+      "priceLabel": "Price:",
+      "exampleButton": "Tailwind example"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "backHome": "Back to home"
+    }
+  },
+  "components": {
+    "languageToggle": {
+      "toggleLanguage": "Switch language"
+    },
+    "sortSelect": {
+      "label": "Sort by",
+      "options": {
+        "relevance": "Relevance",
+        "priceAsc": "Price: low to high",
+        "priceDesc": "Price: high to low",
+        "ratingDesc": "Rating: high to low",
+        "ratingAsc": "Rating: low to high"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error"
+  }
 }
