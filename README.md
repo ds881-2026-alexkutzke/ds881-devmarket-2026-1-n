@@ -55,6 +55,10 @@ docker compose build --no-cache dev    # ou prod
 
 ## Convenções de Arquitetura
 
+**Instalações**
+* Para instalar as bibliotecas, usar a versão proposta do Node v22.22.3: (`nvm install`) [Guia para instalação NVM: [LINK](https://github.com/nvm-sh/nvm#installing-and-updating)]
+
+
 **Estrutura de Pastas e Nomenclatura:**
 * `src/components/`: Componentes reutilizáveis (`PascalCase.tsx`). Devem usar `export default`.
 * `src/pages/`: Rotas (`PascalCasePage.tsx`).
