@@ -1,13 +1,21 @@
 const BASE_URL = 'https://dummyjson.com';
 
-export async function httpGet(path: string) {
+export class HttpError extends Error {
+  readonly status: number;
+
+  constructor(status: number) {
+    super(`HTTP_ERROR_${status}`);
+    this.name = 'HttpError';
+    this.status = status;
+  }
+}
+
+export async function httpGet<T>(path: string): Promise<T> {
   const response = await fetch(`${BASE_URL}${path}`);
 
   if (!response.ok) {
-    throw new Error(
-      `Erro HTTP: ${response.status}`
-    );
+    throw new HttpError(response.status);
   }
 
-  return response.json();
+  return response.json() as Promise<T>;
 }
