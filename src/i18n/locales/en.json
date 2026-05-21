@@ -14,6 +14,10 @@
     }
   },
   "components": {
+    "paymentMethodSelector": {
+      "label": "Payment method",
+      "pix": "PIX"
+    }
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
