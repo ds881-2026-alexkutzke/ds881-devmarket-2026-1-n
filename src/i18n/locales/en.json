@@ -26,6 +26,9 @@
         "ratingDesc": "Rating: high to low",
         "ratingAsc": "Rating: low to high"
       }
+    },
+    "errorState": {
+      "retry": "Try again"
     }
   },
   "common": {
