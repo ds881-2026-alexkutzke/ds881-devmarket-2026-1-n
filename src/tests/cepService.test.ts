@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { fetchAddressByCep } from './cepService';
+import { fetchAddressByCep } from '../services/cepService';
 
 describe('fetchAddressByCep', () => {
   afterEach(() => {
@@ -32,6 +32,15 @@ describe('fetchAddressByCep', () => {
     expect(fetchMock).toHaveBeenCalledWith('https://viacep.com.br/ws/80020310/json/');
   });
 
+  it('lança erro quando a API retorna status HTTP de erro', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+      ok: false,
+      status: 404,
+    }));
+
+    await expect(fetchAddressByCep('12345-678')).rejects.toThrow('errors.cepNotFound');
+  });
+
   it('lança erro quando o ViaCEP retorna erro=true', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
@@ -40,6 +49,6 @@ describe('fetchAddressByCep', () => {
       }),
     }));
 
-    await expect(fetchAddressByCep('00000-000')).rejects.toThrow('CEP não encontrado');
+    await expect(fetchAddressByCep('00000-000')).rejects.toThrow('errors.cepNotFound');
   });
 });

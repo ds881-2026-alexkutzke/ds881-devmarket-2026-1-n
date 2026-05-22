@@ -11,13 +11,13 @@ export async function fetchAddressByCep(cep: string): Promise<ViaCepAddress> {
   const response = await fetch(`${VIA_CEP_BASE_URL}/${normalizedCep}/json/`);
 
   if (!response.ok) {
-    throw new Error('CEP não encontrado');
+    throw new Error('errors.cepNotFound');
   }
 
   const address = (await response.json()) as ViaCepAddress;
 
   if (address.erro) {
-    throw new Error('CEP não encontrado');
+    throw new Error('errors.cepNotFound');
   }
 
   return address;
