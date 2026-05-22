@@ -29,7 +29,19 @@
     },
     "errorState": {
       "retry": "Tentar novamente"
-    }
+    },
+"footer": {
+  "brand": "Market",
+  "copyright": "© 2024 Market.",
+  "tagline": "Experiência de Varejo Premium.",
+  "privacyTitle": "Política de Privacidade",
+  "termsOfService": "Termos de Serviço",
+  "helpTitle": "Central de Ajuda",
+  "shipping": "Frete",
+  "contactTitle": "Fale Conosco",
+  "aboutProject": "Sobre o projeto",
+  "githubRepo": "Repositório no GitHub"
+}
   },
   "common": {
     "loading": "Carregando...",
