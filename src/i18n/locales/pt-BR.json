@@ -34,5 +34,8 @@
   "common": {
     "loading": "Carregando...",
     "error": "Erro"
+  },
+  "errors": {
+    "cepNotFound": "CEP não encontrado"
   }
 }
