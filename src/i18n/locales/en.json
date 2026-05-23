@@ -31,8 +31,14 @@
       "retry": "Try again"
     },
     "footer": {
+      "brand": "DevMarket",
       "copyright": "© {{year}} DevMarket.",
-      "navAriaLabel": "Footer links",
+      "tagline": "Premium Retail Experience.",
+      "privacyTitle": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "helpTitle": "Help Center",
+      "shipping": "Shipping",
+      "contactTitle": "Contact Us",
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
     }
