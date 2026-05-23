@@ -34,5 +34,8 @@
   "common": {
     "loading": "Loading...",
     "error": "Error"
+  },
+  "errors": {
+    "cepNotFound": "ZIP code not found"
   }
 }
