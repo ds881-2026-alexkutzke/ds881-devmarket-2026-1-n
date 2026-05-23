@@ -30,21 +30,18 @@
     "errorState": {
       "retry": "Try again"
     },
-"footer": {
-  "brand": "Market",
-  "copyright": "© 2024 Market.",
-  "tagline": "Premium Retail Experience.",
-  "privacyTitle": "Privacy Policy",
-  "termsOfService": "Terms of Service",
-  "helpTitle": "Help Center",
-  "shipping": "Shipping",
-  "contactTitle": "Contact Us",
-  "aboutProject": "About the project",
-  "githubRepo": "GitHub Repository"
-}
+    "footer": {
+      "copyright": "© {{year}} DevMarket.",
+      "navAriaLabel": "Footer links",
+      "aboutProject": "About the project",
+      "githubRepo": "GitHub Repository"
+    }
   },
   "common": {
     "loading": "Loading...",
     "error": "Error"
+  },
+  "errors": {
+    "cepNotFound": "ZIP code not found"
   }
 }
