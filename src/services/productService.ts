@@ -1,5 +1,59 @@
-import type { Product } from '../types/product.types.ts';
-import { httpGet } from './httpService';
+import type { Product, ProductResponse } from '../types/product.types';
+import { apiFetch } from './apiService';
 
-export const getFirstProduct = (): Promise<Product> =>
-  httpGet<Product>('/products/1');
+let productsCache: Product[] | null = null;
+
+export async function getProducts(): Promise<Product[]> {
+  try {
+    if (productsCache) return productsCache;
+
+    const res = await apiFetch<ProductResponse>('/products');
+    productsCache = res.products;
+    return productsCache;
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function getProductsById(id: number): Promise<Product> {
+  try {
+    if (productsCache) {
+      const found = productsCache.find((p) => p.id === id);
+      if (found) return found;
+    }
+
+    const product = await apiFetch<Product>(`/products/${id}`);
+    return product;
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function searchProducts(query: string): Promise<Product[]> {
+  try {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+
+    if (!productsCache) {
+      await getProducts();
+    }
+
+    if (!productsCache) return [];
+
+    return productsCache.filter((p) =>
+      p.title.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q) ||
+      p.brand.toLowerCase().includes(q)
+    );
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function getFirstProduct(): Promise<Product> {
+  const products = await getProducts();
+  if (!products || products.length === 0) {
+    throw new Error('No products available');
+  }
+  return products[0];
+}
