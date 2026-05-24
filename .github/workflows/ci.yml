@@ -76,7 +76,7 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Executar npm audit (nivel: moderate)
+      - name: "Executar npm audit (nivel: moderate)"
         run: npm audit --audit-level=moderate
 
   # JOB 3: BUILD
