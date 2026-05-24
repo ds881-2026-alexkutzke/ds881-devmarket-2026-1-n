@@ -3,10 +3,24 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { renderHook, waitFor } from '@testing-library/react';
 import useProducts from '../../hooks/useProducts';
 import * as productService from '../../services/productService';
+import type { Product } from '../../types/product.types';
 
 describe('useProducts', () => {
   const mockProducts = [
-    { id: 1, title: 'Produto Teste', price: 10, description: 'Descrição' }
+    { 
+      id: 1, 
+      title: 'Produto Teste', 
+      price: 10, 
+      description: 'Descrição',
+      discountPercentage: 0,
+      rating: 4.5,
+      stock: 5,
+      brand: 'BrandA',
+      category: 'category-a',
+      thumbnail: '',
+      images: [],
+      reviews: []
+    }
   ];
 
   beforeEach(() => {
@@ -14,8 +28,9 @@ describe('useProducts', () => {
   });
 
   it('deve retornar o estado inicial de loading e depois os produtos carregados', async () => {
-    // Mocka o service para retornar os produtos mockados
-    const getProductsSpy = vi.spyOn(productService, 'getProducts').mockResolvedValue(mockProducts as any);
+    // Substituído 'as any' por type casting seguro para o TypeScript-ESLint
+    const getProductsSpy = vi.spyOn(productService, 'getProducts')
+      .mockResolvedValue(mockProducts as unknown as Product[]);
 
     const { result } = renderHook(() => useProducts());
 

@@ -10,7 +10,6 @@ export default function useProducts() {
   useEffect(() => {
     let isMounted = true;
 
-    setIsLoading(true);
     getProducts()
       .then((data) => {
         if (isMounted) {
