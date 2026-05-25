@@ -1,4 +1,4 @@
-import type { Product } from "../types/product.types";
+import type { Product } from "@/types/product.types";
 
 // Retorna N produtos com maior desconto ordenados descrescentemente
 
