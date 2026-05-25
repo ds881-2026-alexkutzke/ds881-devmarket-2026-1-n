@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import { fetchAddressByCep } from '../services/cepService';
-import type { ViaCepAddress } from '../types/cep.types';
+import { fetchAddressByCep } from '@/services/cepService';
+import type { ViaCepAddress } from '@/types/cep.types';
 
 export default function useCep() {
   const [address, setAddress] = useState<ViaCepAddress | null>(null);
