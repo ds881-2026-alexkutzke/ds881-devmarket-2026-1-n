@@ -9,6 +9,7 @@
     "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "paths": {
+      "@/types/*": ["src/types/*"],
       "@/*": ["src/*"]
     },
     "types": ["node", "vitest/globals"]

@@ -1,7 +1,7 @@
 import type {
   ExchangeRateResponse,
   UsdToBrlRate,
-} from "@/types/exchangeRate.types.ts";
+} from "@/types/exchangeRate.types";
 
 const EXCHANGE_RATE_BASE_URL = "https://v6.exchangerate-api.com/v6";
 

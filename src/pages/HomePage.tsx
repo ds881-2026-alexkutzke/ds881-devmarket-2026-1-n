@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 import { getFirstProduct } from "@/services/productService";
-import type { Product } from "@/types/product.types.ts";
+import type { Product } from "@/types/product.types";
 import { formatCurrency } from "@/utils/formatCurrency";
 import Header from "@/components/Header.tsx";
 

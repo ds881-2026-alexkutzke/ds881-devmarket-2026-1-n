@@ -1,4 +1,4 @@
-import type { ViaCepAddress } from "@/types/cep.types.ts";
+import type { ViaCepAddress } from "@/types/cep.types";
 
 const VIA_CEP_BASE_URL = "https://viacep.com.br/ws";
 
