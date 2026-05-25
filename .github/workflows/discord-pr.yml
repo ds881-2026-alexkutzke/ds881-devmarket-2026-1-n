@@ -1,0 +1,40 @@
+name: Notify Discord on PR
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - name: Send PR notification to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_HEAD: ${{ github.event.pull_request.head.ref }}
+          PR_BASE: ${{ github.event.pull_request.base.ref }}
+        run: |
+          jq -n \
+            --arg title "🔀 Novo PR: $PR_TITLE" \
+            --arg url "$PR_URL" \
+            --arg description "${PR_BODY:-_Sem descrição_}" \
+            --arg author "$PR_AUTHOR" \
+            --arg branch "\`$PR_HEAD\` → \`$PR_BASE\`" \
+            '{
+              embeds: [{
+                title: $title,
+                url: $url,
+                description: $description,
+                color: 5814783,
+                fields: [
+                  { name: "Autor", value: $author, inline: true },
+                  { name: "Branch", value: $branch, inline: true }
+                ]
+              }]
+            }' | curl -H "Content-Type: application/json" -X POST -d @- "$DISCORD_WEBHOOK_URL"

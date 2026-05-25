@@ -26,10 +26,28 @@
         "ratingDesc": "Rating: high to low",
         "ratingAsc": "Rating: low to high"
       }
+    },
+    "errorState": {
+      "retry": "Try again"
+    },
+    "footer": {
+      "brand": "DevMarket",
+      "copyright": "© {{year}} DevMarket.",
+      "tagline": "Premium Retail Experience.",
+      "privacyTitle": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "helpTitle": "Help Center",
+      "shipping": "Shipping",
+      "contactTitle": "Contact Us",
+      "aboutProject": "About the project",
+      "githubRepo": "GitHub Repository"
     }
   },
   "common": {
     "loading": "Loading...",
     "error": "Error"
+  },
+  "errors": {
+    "cepNotFound": "ZIP code not found"
   }
 }
