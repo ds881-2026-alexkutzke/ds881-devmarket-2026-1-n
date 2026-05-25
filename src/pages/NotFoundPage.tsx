@@ -1,30 +1,19 @@
-import { useEffect, useState } from "react";
-import { getFirstProduct } from "@/services/productService";
-import type { Product } from "@/types/product.types";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Button from "@mui/material/Button";
 
-const HomePage = () => {
-  const [product, setProduct] = useState<Product | null>(null);
-  const [erro, setErro] = useState(false);
-
-  useEffect(() => {
-    getFirstProduct()
-      .then((data) => setProduct(data))
-      .catch(() => setErro(true));
-  }, []);
-
-  if (erro) {
-    return <div>Erro ao carregar produto.</div>;
-  }
-
-  if (!product) {
-    return <div>Carregando prova de conceito...</div>;
-  }
+const NotFoundPage = () => {
+  const { t } = useTranslation();
 
   return (
-    <main>
-      <h1>Exemplo notfound</h1>
+    <main className="flex flex-col items-center justify-center gap-4 py-16 text-center">
+      <h1>{t("pages.notFound.title")}</h1>
+      <p>{t("pages.notFound.description")}</p>
+      <Button component={Link} to="/" variant="contained">
+        {t("pages.notFound.backHome")}
+      </Button>
     </main>
   );
 };
 
-export default HomePage;
+export default NotFoundPage;
