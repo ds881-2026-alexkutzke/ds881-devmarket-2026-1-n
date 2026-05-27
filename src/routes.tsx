@@ -1,15 +1,12 @@
-import {
-  createHashRouter,
-  type RouteObject,
-} from 'react-router-dom';
+import { createHashRouter, type RouteObject } from "react-router-dom";
 
-import App from './App.tsx';
-import HomePage from './pages/HomePage.tsx';
-import NotFoundPage from './pages/NotFoundPage.tsx';
+import HomePage from "@/pages/HomePage";
+import NotFoundPage from "@/pages/NotFoundPage";
+import App from "@/App";
 
 export const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
@@ -17,7 +14,7 @@ export const routes: RouteObject[] = [
         element: <HomePage />,
       },
       {
-        path: '*',
+        path: "*",
         element: <NotFoundPage />,
       },
     ],
