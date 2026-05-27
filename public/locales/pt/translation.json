@@ -1,0 +1,10 @@
+{
+  "components": {
+    "productGrid": {
+      "errorTitle": "Erro ao carregar produtos",
+      "tryAgain": "Tentar novamente",
+      "emptyTitle": "Nenhum produto encontrado",
+      "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
+    }
+  }
+}
