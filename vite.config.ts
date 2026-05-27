@@ -16,4 +16,19 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  test: {
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json-summary", "json", "lcov"],
+      reportsDirectory: "./coverage",
+      include: ["src/**/*.{ts,tsx}"],
+      exclude: [
+        "src/tests/**",
+        "src/**/*.test.{ts,tsx}",
+        "src/**/*.spec.{ts,tsx}",
+        "src/vite-env.d.ts",
+        "src/main.tsx",
+      ],
+    },
+  },
 });
