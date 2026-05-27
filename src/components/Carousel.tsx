@@ -141,26 +141,26 @@ const Carousel = ({ children }: CarouselProps) => {
       <div className="relative flex items-center w-full">
         <button
           onClick={() => handleScroll('left')}
-          className="absolute left-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-full shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100"
+          className="absolute left-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100"
           aria-label="Anterior"
         >
-          <span className="text-xl font-bold flex items-center justify-center w-6 h-6" aria-hidden="true">&lt;</span>
+          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">&lt;</span>
         </button>
 
         <div
           ref={scrollRef}
           onScroll={handleScrollEvent}
-          className="flex overflow-x-auto gap-4 scroll-smooth w-full py-4 px-2 no-scrollbar *:shrink-0 no-scrollbar"
+          className="flex overflow-x-auto gap-4 scroll-smooth w-full py-4 px-2 no-scrollbar *:shrink-0 scrollbar-none"
         >
           {children}
         </div>
 
         <button
           onClick={() => handleScroll('right')}
-          className="absolute right-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-full shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100"
+          className="absolute right-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100"
           aria-label="Próximo"
         >
-          <span className="text-xl font-bold flex items-center justify-center w-6 h-6" aria-hidden="true">&gt;</span>
+          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">&gt;</span>
         </button>
       </div>
 
