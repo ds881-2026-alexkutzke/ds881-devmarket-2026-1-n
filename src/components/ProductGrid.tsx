@@ -23,7 +23,7 @@ export default function ProductGrid({
     return (
       <Grid container spacing={2}>
         {Array.from({ length: 8 }).map((_, index) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
             <Skeleton
               variant="rectangular"
               width="100%"
@@ -61,7 +61,7 @@ export default function ProductGrid({
   return (
     <Grid container spacing={2}>
       {products.map((product) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
+        <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={product.id}>
           <ProductCard
             product={product}
             onClick={() => onProductClick(product)}
