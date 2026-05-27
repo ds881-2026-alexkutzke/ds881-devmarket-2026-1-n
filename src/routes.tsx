@@ -1,8 +1,15 @@
 import { createHashRouter, type RouteObject } from "react-router-dom";
 
-import HomePage from "@/pages/HomePage";
-import NotFoundPage from "@/pages/NotFoundPage";
 import App from "@/App";
+import LandingPage from "@/pages/LandingPage";
+import MainLayoutPage from "@/pages/MainLayoutPage";
+import HomePage from "@/pages/HomePage";
+import SearchPage from "@/pages/SearchPage";
+import ProductDetailPage from "@/pages/ProductDetailPage";
+import CartPage from "@/pages/CartPage";
+import CheckoutPage from "@/pages/CheckoutPage";
+import PaymentPage from "@/pages/PaymentPage";
+import NotFoundPage from "@/pages/NotFoundPage";
 
 export const routes: RouteObject[] = [
   {
@@ -11,7 +18,18 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <LandingPage />,
+      },
+      {
+        element: <MainLayoutPage />,
+        children: [
+          { path: "home", element: <HomePage /> },
+          { path: "search", element: <SearchPage /> },
+          { path: "product/:id", element: <ProductDetailPage /> },
+          { path: "cart", element: <CartPage /> },
+          { path: "checkout", element: <CheckoutPage /> },
+          { path: "payment", element: <PaymentPage /> },
+        ],
       },
       {
         path: "*",
