@@ -17,6 +17,25 @@
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
+    "addressForm": {
+      "ariaLabel": "Address form",
+      "fields": {
+        "cep": "ZIP code",
+        "logradouro": "Street",
+        "complemento": "Complement",
+        "bairro": "Neighborhood",
+        "cidade": "City",
+        "estado": "State"
+      },
+      "cep": {
+        "helperError": "Invalid or not found ZIP code",
+        "status": {
+          "loading": "Looking up ZIP code",
+          "ok": "ZIP code found",
+          "error": "Error looking up ZIP code"
+        }
+      }
+    },
     "sortSelect": {
       "label": "Sort by",
       "options": {
