@@ -17,6 +17,25 @@
     "languageToggle": {
       "toggleLanguage": "Mudar idioma"
     },
+    "addressForm": {
+      "ariaLabel": "Formulário de endereço",
+      "fields": {
+        "cep": "CEP",
+        "logradouro": "Logradouro",
+        "complemento": "Complemento",
+        "bairro": "Bairro",
+        "cidade": "Cidade",
+        "estado": "Estado"
+      },
+      "cep": {
+        "helperError": "CEP inválido ou não encontrado",
+        "status": {
+          "loading": "Buscando CEP",
+          "ok": "CEP encontrado",
+          "error": "Erro ao buscar CEP"
+        }
+      }
+    },
     "sortSelect": {
       "label": "Ordenar por",
       "options": {
