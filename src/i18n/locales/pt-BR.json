@@ -30,6 +30,20 @@
     "categoryChip": {
       "label": "Categoria: {{name}}"
     },
+    "header": {
+      "brand": "DevMarket",
+      "home": "Início",
+      "searchPlaceholder": "Buscar produtos..."
+    },
+    "quantitySelector": {
+      "decrease": "Diminuir quantidade",
+      "quantityLabel": "Quantidade selecionada",
+      "increase": "Aumentar quantidade",
+      "remove": "Remover item"
+    },
+    "starRating": {
+      "label": "Nota: {{rating}} estrelas"
+    },
     "errorState": {
       "retry": "Tentar novamente"
     },

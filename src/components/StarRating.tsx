@@ -1,5 +1,11 @@
-// alterar pela issue de criação do componente
+import { useTranslation } from 'react-i18next';
 
 export default function StarRating({ rating }: { rating: number }) {
-  return <div className="text-sm text-yellow-500">Nota: {rating} estrelas</div>;
+  const { t } = useTranslation();
+
+  return (
+    <div className="text-sm text-yellow-500">
+      {t('components.starRating.label', { rating })}
+    </div>
+  );
 }
