@@ -46,6 +46,9 @@
         "ratingAsc": "Rating: low to high"
       }
     },
+    "categoryChip": {
+      "label": "Category: {{name}}"
+    },
     "errorState": {
       "retry": "Try again"
     },

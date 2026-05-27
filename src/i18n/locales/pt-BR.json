@@ -46,6 +46,9 @@
         "ratingAsc": "Avaliação: menor primeiro"
       }
     },
+    "categoryChip": {
+      "label": "Categoria: {{name}}"
+    },
     "errorState": {
       "retry": "Tentar novamente"
     },
