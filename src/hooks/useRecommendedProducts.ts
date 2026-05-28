@@ -13,35 +13,45 @@ interface UseRecommendedProductsResult {
   error: boolean;
 }
 
+interface RecommendedProductsState {
+  products: Product[];
+  error: boolean;
+  requestKey: string | null;
+}
+
 export function useRecommendedProducts({
   excludeIds = [],
 }: UseRecommendedProductsOptions = {}): UseRecommendedProductsResult {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const excludeKey = excludeIds.join(",");
+  const [state, setState] = useState<RecommendedProductsState>({
+    products: [],
+    error: false,
+    requestKey: null,
+  });
 
   useEffect(() => {
     let isActive = true;
+    const ids = excludeKey
+      ? excludeKey.split(",").map((id) => Number(id))
+      : [];
 
-    setLoading(true);
-    setError(false);
-
-    getRecommendedProducts(excludeIds)
+    getRecommendedProducts(ids)
       .then((data) => {
         if (isActive) {
-          setProducts(data);
+          setState({
+            products: data,
+            error: false,
+            requestKey: excludeKey,
+          });
         }
       })
       .catch(() => {
         if (isActive) {
-          setProducts([]);
-          setError(true);
-        }
-      })
-      .finally(() => {
-        if (isActive) {
-          setLoading(false);
+          setState({
+            products: [],
+            error: true,
+            requestKey: excludeKey,
+          });
         }
       });
 
@@ -50,5 +60,9 @@ export function useRecommendedProducts({
     };
   }, [excludeKey]);
 
-  return { products, loading, error };
+  return {
+    products: state.products,
+    loading: state.requestKey !== excludeKey,
+    error: state.error,
+  };
 }

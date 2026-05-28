@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import type { CartItem, CartState } from "@/types/cart.types";
 
 const CART_STORAGE_KEYS = ["cart", "devmarket-cart", "devmarket:cart"];
@@ -28,25 +26,23 @@ function extractIds(value: unknown): number[] {
 }
 
 export function useCartProductIds(): number[] {
-  const [ids, setIds] = useState<number[]>([]);
+  if (typeof window === "undefined") {
+    return [];
+  }
 
-  useEffect(() => {
-    const nextIds = CART_STORAGE_KEYS.flatMap((key) => {
-      const rawCart = window.localStorage.getItem(key);
+  const ids = CART_STORAGE_KEYS.flatMap((key) => {
+    const rawCart = window.localStorage.getItem(key);
 
-      if (!rawCart) {
-        return [];
-      }
+    if (!rawCart) {
+      return [];
+    }
 
-      try {
-        return extractIds(JSON.parse(rawCart));
-      } catch {
-        return [];
-      }
-    });
+    try {
+      return extractIds(JSON.parse(rawCart));
+    } catch {
+      return [];
+    }
+  });
 
-    setIds([...new Set(nextIds)]);
-  }, []);
-
-  return ids;
+  return [...new Set(ids)];
 }

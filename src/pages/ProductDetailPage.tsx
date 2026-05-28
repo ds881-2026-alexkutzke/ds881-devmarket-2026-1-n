@@ -7,33 +7,51 @@ import type { Product } from "@/types/product.types";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
-  const [product, setProduct] = useState<Product | null>(null);
-  const [error, setError] = useState(false);
+  const productId = Number(id);
+  const isInvalidProductId = !Number.isFinite(productId);
+  const [state, setState] = useState<{
+    product: Product | null;
+    error: boolean;
+    productId: number | null;
+  }>({
+    product: null,
+    error: false,
+    productId: null,
+  });
 
   useEffect(() => {
-    const productId = Number(id);
-
-    if (!Number.isFinite(productId)) {
-      setError(true);
+    if (isInvalidProductId) {
       return;
     }
 
     getProductById(productId)
-      .then((data) => setProduct(data))
-      .catch(() => setError(true));
-  }, [id]);
+      .then((data) =>
+        setState({
+          product: data,
+          error: false,
+          productId,
+        }),
+      )
+      .catch(() =>
+        setState({
+          product: null,
+          error: true,
+          productId,
+        }),
+      );
+  }, [isInvalidProductId, productId]);
 
-  if (error) {
+  if (isInvalidProductId || (state.error && state.productId === productId)) {
     return <main className="p-6">Produto nao encontrado.</main>;
   }
 
-  if (!product) {
+  if (state.productId !== productId || !state.product) {
     return <main className="p-6">Carregando produto...</main>;
   }
 
   return (
     <main className="mx-auto max-w-sm p-6">
-      <ProductCard product={product} />
+      <ProductCard product={state.product} />
     </main>
   );
 }
