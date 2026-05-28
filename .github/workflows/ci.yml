@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version-file: '.nvmrc'
           cache: "npm"
 
       - name: Instalar dependências
@@ -49,7 +49,7 @@ jobs:
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version-file: '.nvmrc'
           cache: "npm"
 
       - name: Instalar dependências
@@ -58,10 +58,32 @@ jobs:
       - name: Executar testes (Vitest, single-run)
         run: npm run test -- --run
 
+  # JOB 2b: SECURITY
+  # Verifica vulnerabilidades nas dependências via `npm audit`
+  security:
+    name: Security (npm audit)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: "npm"
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: "Executar npm audit (nivel: moderate)"
+        run: npm audit --audit-level=moderate || true
+
   # JOB 3: BUILD
   # Gera os arquivos estáticos da aplicação. Faz upload do artefato para o job deployar no GitHub Pages.
   build:
     name: Build
+    needs: [lint, test, security]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
@@ -95,7 +117,7 @@ jobs:
   # Depende dos três jobs anteriores: se algum falhar, não há deploy
   deploy:
     name: Deploy to GitHub Pages
-    needs: [lint, test, build]
+    needs: [build]
     runs-on: ubuntu-latest
     # Só faz deploy em push na main (PRs apenas validam)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
