@@ -63,6 +63,11 @@
       "contactTitle": "Fale Conosco",
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
+    },
+    "reviewList": {
+      "title": "Avaliações",
+      "noReviews": "Nenhuma avaliação para este produto.",
+      "outOfFive": "de 5"
     }
   },
   "common": {
