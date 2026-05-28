@@ -32,3 +32,4 @@
 - Anna Luiza Mariano - Tech Lead - [GitHub](https://github.com/annaluiza29)
 - Angelo Chiavegatti Prebianca - Tech Lead - [GitHub](https://github.com/AngeloPre)
 - João Vitor Alves Buss — Dev — [GitHub](https://github.com/buss-dev)
+- Artur Falavinha - Dev - [GitHub](https://github.com/Artur-Falavinha)

@@ -14,6 +14,12 @@ export interface Product {
   thumbnail: string;
   images: string[];
   reviews: Review[];
+  sku: string;
+  dimensions: {
+    width: number;
+    height: number;
+    depth: number;
+  };
 }
 
 // Opcional: Interface para quando a API retornar a lista completa (ex: /products)
