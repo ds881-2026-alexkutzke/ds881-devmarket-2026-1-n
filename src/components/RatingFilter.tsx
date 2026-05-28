@@ -1,4 +1,5 @@
 import TextField from '@mui/material/TextField';
+import { useTranslation } from 'react-i18next';
 
 interface RatingRange {
   min: number;
@@ -25,6 +26,7 @@ function RatingFilter({
   max,
   onChange,
 }: RatingFilterProps) {
+  const { t } = useTranslation();
   const hasInvalidRange = min > max;
 
   const handleMinChange = (value: string) => {
@@ -44,12 +46,12 @@ function RatingFilter({
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <TextField
-        label="Nota minima"
+        label={t('components.ratingFilter.minLabel')}
         type="number"
         value={min}
         onChange={(event) => handleMinChange(event.target.value)}
         error={hasInvalidRange}
-        helperText={hasInvalidRange ? 'Minimo maior que o maximo' : undefined}
+        helperText={hasInvalidRange ? t('components.ratingFilter.minError') : undefined}
         slotProps={{
           htmlInput: {
             min: MIN_RATING,
@@ -62,12 +64,12 @@ function RatingFilter({
       />
 
       <TextField
-        label="Nota maxima"
+        label={t('components.ratingFilter.maxLabel')}
         type="number"
         value={max}
         onChange={(event) => handleMaxChange(event.target.value)}
         error={hasInvalidRange}
-        helperText={hasInvalidRange ? 'Maximo menor que o minimo' : undefined}
+        helperText={hasInvalidRange ? t('components.ratingFilter.maxError') : undefined}
         slotProps={{
           htmlInput: {
             min: MIN_RATING,
