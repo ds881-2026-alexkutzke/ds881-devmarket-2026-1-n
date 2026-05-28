@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface PaginationProps {
   currentPage: number;
@@ -8,6 +9,7 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
+  const { t } = useTranslation();
   const getPageNumbers = () => {
     if (totalPages <= 7) {
       return Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -27,26 +29,26 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
   const pages = getPageNumbers();
 
   return (
-    <nav aria-label="Pagination" className="flex items-center justify-center space-x-2 my-4">
+    <nav aria-label={t('components.pagination.nav', { defaultValue: 'Pagination' })} className="flex items-center justify-center space-x-2 my-4">
       <Button
         variant="outlined"
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
-        aria-label="Anterior"
+        aria-label={t('components.pagination.previous')}
       >
-        Anterior
+        {t('components.pagination.previous')}
       </Button>
 
       {pages.map((page, index) => (
         <React.Fragment key={index}>
           {page === '...' ? (
-            <span className="px-3 py-1 text-gray-500">...</span>
+            <span className="px-3 py-1 text-gray-500">{t('components.pagination.ellipsis', { defaultValue: '...' })}</span>
           ) : (
             <Button
               variant={currentPage === page ? "contained" : "outlined"}
               onClick={() => onPageChange(page as number)}
               aria-current={currentPage === page ? 'page' : undefined}
-              aria-label={`Página ${page}`}
+              aria-label={t('components.pagination.pageLabel', { page })}
             >
               {page}
             </Button>
@@ -58,9 +60,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         variant="outlined"
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
-        aria-label="Próxima"
+        aria-label={t('components.pagination.next')}
       >
-        Próxima
+        {t('components.pagination.next')}
       </Button>
     </nav>
   );
