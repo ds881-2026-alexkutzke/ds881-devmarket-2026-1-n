@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import ProductCarousel from "@/components/ProductCarousel";
+import Header from "@/components/Header.tsx";
+import { useCartProductIds } from "@/hooks/useCartProductIds";
+import { useRecommendedProducts } from "@/hooks/useRecommendedProducts";
 import { getFirstProduct } from "@/services/productService";
 import type { Product } from "@/types/product.types";
 import { formatCurrency } from "@/utils/formatCurrency";
-import Header from "@/components/Header.tsx";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product | null>(null);
   const [error, setError] = useState(false);
+  const idsDoCarrinho = useCartProductIds();
+  const recommendedProducts = useRecommendedProducts({
+    excludeIds: idsDoCarrinho,
+  });
 
   useEffect(() => {
     getFirstProduct()
@@ -50,6 +59,16 @@ const HomePage = () => {
             {t("components.languageToggle.toggleLanguage")}
           </Button>
         </div>
+
+        <ProductCarousel
+          title={t("pages.home.recommendedProducts")}
+          products={recommendedProducts.products}
+          loading={recommendedProducts.loading}
+          error={recommendedProducts.error}
+          onProductClick={(recommendedProduct) =>
+            navigate(`/product/${recommendedProduct.id}`)
+          }
+        />
       </main>
     </>
   );
