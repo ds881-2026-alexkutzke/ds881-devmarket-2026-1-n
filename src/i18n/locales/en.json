@@ -5,7 +5,8 @@
       "loading": "Loading proof of concept...",
       "error": "Error loading product.",
       "priceLabel": "Price:",
-      "exampleButton": "Tailwind example"
+      "exampleButton": "Tailwind example",
+      "recommendedProducts": "Recommended products"
     },
     "notFound": {
       "title": "Page not found",

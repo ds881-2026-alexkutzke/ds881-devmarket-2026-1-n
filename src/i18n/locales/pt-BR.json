@@ -5,7 +5,8 @@
       "loading": "Carregando prova de conceito...",
       "error": "Erro ao carregar produto.",
       "priceLabel": "Preço:",
-      "exampleButton": "Exemplo Tailwind"
+      "exampleButton": "Exemplo Tailwind",
+      "recommendedProducts": "Produtos recomendados"
     },
     "notFound": {
       "title": "Página não encontrada",
