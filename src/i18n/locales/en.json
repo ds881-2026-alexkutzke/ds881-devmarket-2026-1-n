@@ -85,6 +85,17 @@
     "errorState": {
       "retry": "Try again"
     },
+    "productInfoSection": {
+      "title": "About the product",
+      "description": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "sku": "SKU",
+      "dimensions": "Dimensions",
+      "height": "Height",
+      "width": "Width",
+      "depth": "Depth"
+    },
     "footer": {
       "brand": "DevMarket",
       "copyright": "© {{year}} DevMarket.",
@@ -96,6 +107,10 @@
       "contactTitle": "Contact Us",
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
+    },
+    "productGrid": {
+      "emptyTitle": "No products found",
+      "emptyDescription": "Try adjusting your filters or come back later."
     }
   },
   "common": {
