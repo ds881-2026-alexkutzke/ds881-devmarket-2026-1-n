@@ -74,6 +74,10 @@
       "contactTitle": "Contact Us",
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
+    },
+    "productGrid": {
+      "emptyTitle": "No products found",
+      "emptyDescription": "Try adjusting your filters or come back later."
     }
   },
   "common": {

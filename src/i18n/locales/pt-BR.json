@@ -74,6 +74,10 @@
       "contactTitle": "Fale Conosco",
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
+    },
+    "productGrid": {
+      "emptyTitle": "Nenhum produto encontrado",
+      "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
     }
   },
   "common": {
