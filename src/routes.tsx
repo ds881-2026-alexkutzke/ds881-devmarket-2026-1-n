@@ -1,4 +1,8 @@
-import { createBrowserRouter, type RouteObject } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  type RouteObject,
+} from "react-router-dom";
 
 import App from "@/App";
 import LandingPage from "@/pages/LandingPage";
@@ -39,4 +43,6 @@ export const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+export const router = import.meta.env.DEV
+  ? createBrowserRouter(routes)
+  : createHashRouter(routes);
