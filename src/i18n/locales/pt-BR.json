@@ -46,11 +46,55 @@
         "ratingAsc": "Avaliação: menor primeiro"
       }
     },
+    "priceFilter": {
+      "minLabel": "Preço mínimo (R$)",
+      "maxLabel": "Preço máximo (R$)",
+      "minError": "Mínimo maior que o máximo",
+      "maxError": "Máximo menor que o mínimo"
+    },
+    "ratingFilter": {
+      "minLabel": "Nota mínima",
+      "maxLabel": "Nota máxima",
+      "minError": "Mínimo maior que o máximo",
+      "maxError": "Máximo menor que o mínimo"
+    },
     "categoryChip": {
       "label": "Categoria: {{name}}"
     },
+    "header": {
+      "brand": "DevMarket",
+      "home": "Início",
+      "searchPlaceholder": "Buscar produtos..."
+    },
+    "pagination": {
+      "nav": "Paginação",
+      "previous": "Anterior",
+      "next": "Próxima",
+      "pageLabel": "Página {{page}}",
+      "ellipsis": "..."
+    },
+    "quantitySelector": {
+      "decrease": "Diminuir quantidade",
+      "quantityLabel": "Quantidade selecionada",
+      "increase": "Aumentar quantidade",
+      "remove": "Remover item"
+    },
+    "starRating": {
+      "label": "Nota: {{rating}} estrelas"
+    },
     "errorState": {
       "retry": "Tentar novamente"
+    },
+    "productInfoSection": {
+      "title": "Sobre o produto",
+      "description": "Descrição",
+      "category": "Categoria",
+      "brand": "Marca",
+      "sku": "SKU",
+      "dimensions": "Dimensões",
+      "height": "Altura",
+      "width": "Largura",
+      "depth": "Comprimento"
     },
     "footer": {
       "brand": "DevMarket",
@@ -63,6 +107,10 @@
       "contactTitle": "Fale Conosco",
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
+    },
+    "productGrid": {
+      "emptyTitle": "Nenhum produto encontrado",
+      "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
     }
   },
   "common": {
