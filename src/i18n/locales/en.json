@@ -46,6 +46,18 @@
         "ratingAsc": "Rating: low to high"
       }
     },
+    "priceFilter": {
+      "minLabel": "Minimum price (R$)",
+      "maxLabel": "Maximum price (R$)",
+      "minError": "Minimum is greater than maximum",
+      "maxError": "Maximum is lower than minimum"
+    },
+    "ratingFilter": {
+      "minLabel": "Minimum rating",
+      "maxLabel": "Maximum rating",
+      "minError": "Minimum is greater than maximum",
+      "maxError": "Maximum is lower than minimum"
+    },
     "categoryChip": {
       "label": "Category: {{name}}"
     },
@@ -53,6 +65,13 @@
       "brand": "DevMarket",
       "home": "Home",
       "searchPlaceholder": "Search products..."
+    },
+    "pagination": {
+      "nav": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "pageLabel": "Page {{page}}",
+      "ellipsis": "..."
     },
     "quantitySelector": {
       "decrease": "Decrease quantity",
