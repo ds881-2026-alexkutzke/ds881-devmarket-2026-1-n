@@ -52,6 +52,17 @@
     "errorState": {
       "retry": "Try again"
     },
+    "productInfoSection": {
+      "title": "About the product",
+      "description": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "sku": "SKU",
+      "dimensions": "Dimensions",
+      "height": "Height",
+      "width": "Width",
+      "depth": "Depth"
+    },
     "footer": {
       "brand": "DevMarket",
       "copyright": "© {{year}} DevMarket.",
