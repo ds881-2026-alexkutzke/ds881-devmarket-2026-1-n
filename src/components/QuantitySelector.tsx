@@ -1,5 +1,6 @@
 import { Add, DeleteOutlined, Remove } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
+import { useTranslation } from 'react-i18next';
 
 interface QuantitySelectorProps {
   value: number;
@@ -16,6 +17,7 @@ function QuantitySelector({
   onChange,
   onRemove,
 }: QuantitySelectorProps) {
+  const { t } = useTranslation();
   const isMinValue = value <= min;
   const isMaxValue = value >= max;
 
@@ -36,7 +38,7 @@ function QuantitySelector({
       <IconButton
         onClick={decrease}
         disabled={isMinValue}
-        aria-label="Diminuir quantidade"
+        aria-label={t('components.quantitySelector.decrease')}
         size="small"
         className="h-8 w-8 rounded-md text-muted-950 transition hover:bg-muted-300 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-40"
       >
@@ -44,7 +46,7 @@ function QuantitySelector({
       </IconButton>
 
       <span
-        aria-label="Quantidade selecionada"
+        aria-label={t('components.quantitySelector.quantityLabel')}
         className="flex h-8 min-w-8 items-center justify-center px-2 text-base font-medium"
       >
         {value}
@@ -53,7 +55,7 @@ function QuantitySelector({
       <IconButton
         onClick={increase}
         disabled={isMaxValue}
-        aria-label="Aumentar quantidade"
+        aria-label={t('components.quantitySelector.increase')}
         size="small"
         className="h-8 w-8 rounded-md text-muted-950 transition hover:bg-muted-300 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-40"
       >
@@ -62,7 +64,7 @@ function QuantitySelector({
 
       <IconButton
         onClick={onRemove}
-        aria-label="Remover item"
+        aria-label={t('components.quantitySelector.remove')}
         size="small"
         className="h-8 w-8 rounded-md text-danger-700 transition hover:bg-danger-50 focus:outline-none focus:ring-2 focus:ring-danger-500"
       >

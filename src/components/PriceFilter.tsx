@@ -1,5 +1,6 @@
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { useTranslation } from 'react-i18next';
 
 export interface PriceFilterValue {
   min: number;
@@ -13,6 +14,7 @@ interface PriceFilterProps {
 }
 
 function PriceFilter({ min, max, onChange }: PriceFilterProps) {
+  const { t } = useTranslation();
   const hasInvalidRange = min > max;
 
   const parsePrice = (value: string) => {
@@ -39,11 +41,11 @@ function PriceFilter({ min, max, onChange }: PriceFilterProps) {
     <Stack spacing={2}>
       <TextField
         type="number"
-        label="Preço mínimo (R$)"
+        label={t('components.priceFilter.minLabel')}
         value={min}
         onChange={(event) => handleMinChange(event.target.value)}
         error={hasInvalidRange}
-        helperText={hasInvalidRange ? 'Mínimo maior que o máximo' : undefined}
+        helperText={hasInvalidRange ? t('components.priceFilter.minError') : undefined}
         size="small"
         fullWidth
         slotProps={{
@@ -56,11 +58,11 @@ function PriceFilter({ min, max, onChange }: PriceFilterProps) {
 
       <TextField
         type="number"
-        label="Preço máximo (R$)"
+        label={t('components.priceFilter.maxLabel')}
         value={max}
         onChange={(event) => handleMaxChange(event.target.value)}
         error={hasInvalidRange}
-        helperText={hasInvalidRange ? 'Máximo menor que o mínimo' : undefined}
+        helperText={hasInvalidRange ? t('components.priceFilter.maxError') : undefined}
         size="small"
         fullWidth
         slotProps={{
