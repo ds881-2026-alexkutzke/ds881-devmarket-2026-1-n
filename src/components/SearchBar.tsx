@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTranslation } from 'react-i18next';
-
-import useDebounce from '../hooks/useDebounce'; 
+import useDebounce from '@/hooks/useDebounce';
 
 interface SearchBarProps {
   onSearchChange?: (query: string) => void;
