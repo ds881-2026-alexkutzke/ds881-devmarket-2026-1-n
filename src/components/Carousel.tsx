@@ -1,10 +1,12 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface CarouselProps {
   children: React.ReactNode;
 }
 
 const Carousel = ({ children }: CarouselProps) => {
+  const { t, i18n } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScroll, setCanScroll] = useState(false);
@@ -142,9 +144,9 @@ const Carousel = ({ children }: CarouselProps) => {
         <button
           onClick={() => handleScroll('left')}
           className="absolute left-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100"
-          aria-label="Anterior"
+          aria-label={t('components.carousel.previous')}
         >
-          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">&lt;</span>
+          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">{'\u003C'}</span>
         </button>
 
         <div
@@ -158,9 +160,9 @@ const Carousel = ({ children }: CarouselProps) => {
         <button
           onClick={() => handleScroll('right')}
           className="absolute right-2 z-10 p-2 bg-(--bg) hover:bg-primary-50 border border-(--border) rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent) transition-all opacity-0 group-hover:opacity-100 focus-visible:opacity-100"
-          aria-label="Próximo"
+          aria-label={t('components.carousel.next')}
         >
-          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">&gt;</span>
+          <span className="text-xl font-bold flex items-center justify-center w-6 h-6 -mt-1" aria-hidden="true">{"\u003E"}</span>
         </button>
       </div>
 

@@ -111,6 +111,10 @@
     "productGrid": {
       "emptyTitle": "Nenhum produto encontrado",
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
+    },
+    "carousel": {
+      "previous": "Anterior",
+      "next": "Próximo"
     }
   },
   "common": {
