@@ -17,6 +17,25 @@
     "languageToggle": {
       "toggleLanguage": "Mudar idioma"
     },
+    "addressForm": {
+      "ariaLabel": "Formulário de endereço",
+      "fields": {
+        "cep": "CEP",
+        "logradouro": "Logradouro",
+        "complemento": "Complemento",
+        "bairro": "Bairro",
+        "cidade": "Cidade",
+        "estado": "Estado"
+      },
+      "cep": {
+        "helperError": "CEP inválido ou não encontrado",
+        "status": {
+          "loading": "Buscando CEP",
+          "ok": "CEP encontrado",
+          "error": "Erro ao buscar CEP"
+        }
+      }
+    },
     "sortSelect": {
       "label": "Ordenar por",
       "options": {
@@ -27,8 +46,22 @@
         "ratingAsc": "Avaliação: menor primeiro"
       }
     },
+    "categoryChip": {
+      "label": "Categoria: {{name}}"
+    },
     "errorState": {
       "retry": "Tentar novamente"
+    },
+    "productInfoSection": {
+      "title": "Sobre o produto",
+      "description": "Descrição",
+      "category": "Categoria",
+      "brand": "Marca",
+      "sku": "SKU",
+      "dimensions": "Dimensões",
+      "height": "Altura",
+      "width": "Largura",
+      "depth": "Comprimento"
     },
     "footer": {
       "brand": "DevMarket",
@@ -41,6 +74,10 @@
       "contactTitle": "Fale Conosco",
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
+    },
+    "productGrid": {
+      "emptyTitle": "Nenhum produto encontrado",
+      "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
     }
   },
   "common": {

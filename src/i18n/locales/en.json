@@ -17,6 +17,25 @@
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
+    "addressForm": {
+      "ariaLabel": "Address form",
+      "fields": {
+        "cep": "ZIP code",
+        "logradouro": "Street",
+        "complemento": "Complement",
+        "bairro": "Neighborhood",
+        "cidade": "City",
+        "estado": "State"
+      },
+      "cep": {
+        "helperError": "Invalid or not found ZIP code",
+        "status": {
+          "loading": "Looking up ZIP code",
+          "ok": "ZIP code found",
+          "error": "Error looking up ZIP code"
+        }
+      }
+    },
     "sortSelect": {
       "label": "Sort by",
       "options": {
@@ -27,8 +46,22 @@
         "ratingAsc": "Rating: low to high"
       }
     },
+    "categoryChip": {
+      "label": "Category: {{name}}"
+    },
     "errorState": {
       "retry": "Try again"
+    },
+    "productInfoSection": {
+      "title": "About the product",
+      "description": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "sku": "SKU",
+      "dimensions": "Dimensions",
+      "height": "Height",
+      "width": "Width",
+      "depth": "Depth"
     },
     "footer": {
       "brand": "DevMarket",
@@ -41,6 +74,10 @@
       "contactTitle": "Contact Us",
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
+    },
+    "productGrid": {
+      "emptyTitle": "No products found",
+      "emptyDescription": "Try adjusting your filters or come back later."
     }
   },
   "common": {
