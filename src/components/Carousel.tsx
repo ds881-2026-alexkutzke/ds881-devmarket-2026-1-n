@@ -6,7 +6,7 @@ interface CarouselProps {
 }
 
 const Carousel = ({ children }: CarouselProps) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScroll, setCanScroll] = useState(false);
