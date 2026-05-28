@@ -2,6 +2,7 @@ import { Grid, Skeleton } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import type { Product } from '@/types/product.types';
 import EmptyState from './EmptyState';
+import ErrorState from './ErrorState';
 import ProductCard from './ProductCard';
 
 interface ProductGridProps {
@@ -19,6 +20,7 @@ export default function ProductGrid({
 }: ProductGridProps) {
   const { t } = useTranslation();
 
+  // 1. Estado de Loading
   if (isLoading) {
     return (
       <Grid container spacing={2}>
@@ -36,19 +38,12 @@ export default function ProductGrid({
     );
   }
 
+  // 2. Estado de Erro (usando o ErrorState do projeto)
   if (error) {
-    return (
-      <EmptyState
-        title={t('components.productGrid.errorTitle')}
-        description={error.message}
-        action={{
-          label: t('components.productGrid.tryAgain'),
-          onClick: () => window.location.reload(),
-        }}
-      />
-    );
+    return <ErrorState message={t('pages.home.error')} onRetry={() => window.location.reload()} />;
   }
 
+  // 3. Estado Vazio (usando o EmptyState do projeto)
   if (products.length === 0) {
     return (
       <EmptyState
@@ -58,14 +53,12 @@ export default function ProductGrid({
     );
   }
 
+  // 4. Estado com Produtos
   return (
     <Grid container spacing={2}>
       {products.map((product) => (
         <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={product.id}>
-          <ProductCard
-            product={product}
-            onClick={() => onProductClick(product)}
-          />
+          <ProductCard product={product} onClick={() => onProductClick(product)} />
         </Grid>
       ))}
     </Grid>
