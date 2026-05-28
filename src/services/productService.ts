@@ -1,14 +1,25 @@
-import type { Product, ProductResponse } from '../types/product.types';
+import type { Product, ProductResponse } from '@/types/product.types';
 import { apiFetch } from './apiService';
 
 let productsCache: Product[] | null = null;
+// Promise em andamento para evitar fetchs duplicados (request deduping)
+let productsPromise: Promise<Product[]> | null = null;
 
 export async function getProducts(): Promise<Product[]> {
   if (productsCache) return productsCache;
 
-  const res = await apiFetch<ProductResponse>('/products');
-  productsCache = res.products;
-  return productsCache;
+  if (productsPromise) return productsPromise;
+
+  productsPromise = apiFetch<ProductResponse>('/products')
+    .then((res) => {
+      productsCache = res.products;
+      return productsCache as Product[];
+    })
+    .finally(() => {
+      productsPromise = null;
+    });
+
+  return productsPromise;
 }
 
 export async function getProductsById(id: number): Promise<Product> {
