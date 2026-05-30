@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
 
-export function CartProvider({ children }: { children: ReactNode }) {
+export default function CartProvider({ children }: { children: ReactNode }) {
   return <>{children}</>;
 }
