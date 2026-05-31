@@ -1,5 +1,8 @@
 {
   "pages": {
+    "checkout": {
+      "title": "Checkout"
+    },
     "home": {
       "title": "PoC: API Connection",
       "loading": "Loading proof of concept...",
@@ -17,6 +20,26 @@
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
+    "addressForm": {
+      "ariaLabel": "Address form",
+      "fields": {
+        "cep": "ZIP code",
+        "logradouro": "Street",
+        "numero": "Number",
+        "complemento": "Complement",
+        "bairro": "Neighborhood",
+        "cidade": "City",
+        "estado": "State"
+      },
+      "cep": {
+        "helperError": "Invalid or not found ZIP code",
+        "status": {
+          "loading": "Looking up ZIP code",
+          "ok": "ZIP code found",
+          "error": "Error looking up ZIP code"
+        }
+      }
+    },
     "sortSelect": {
       "label": "Sort by",
       "options": {
@@ -27,8 +50,55 @@
         "ratingAsc": "Rating: low to high"
       }
     },
+    "priceFilter": {
+      "minLabel": "Minimum price (R$)",
+      "maxLabel": "Maximum price (R$)",
+      "minError": "Minimum is greater than maximum",
+      "maxError": "Maximum is lower than minimum"
+    },
+    "ratingFilter": {
+      "minLabel": "Minimum rating",
+      "maxLabel": "Maximum rating",
+      "minError": "Minimum is greater than maximum",
+      "maxError": "Maximum is lower than minimum"
+    },
+    "categoryChip": {
+      "label": "Category: {{name}}"
+    },
+    "header": {
+      "brand": "DevMarket",
+      "home": "Home",
+      "searchPlaceholder": "Search products..."
+    },
+    "pagination": {
+      "nav": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "pageLabel": "Page {{page}}",
+      "ellipsis": "..."
+    },
+    "quantitySelector": {
+      "decrease": "Decrease quantity",
+      "quantityLabel": "Selected quantity",
+      "increase": "Increase quantity",
+      "remove": "Remove item"
+    },
+    "starRating": {
+      "label": "Rating: {{rating}} stars"
+    },
     "errorState": {
       "retry": "Try again"
+    },
+    "productInfoSection": {
+      "title": "About the product",
+      "description": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "sku": "SKU",
+      "dimensions": "Dimensions",
+      "height": "Height",
+      "width": "Width",
+      "depth": "Depth"
     },
     "footer": {
       "brand": "DevMarket",
@@ -41,6 +111,15 @@
       "contactTitle": "Contact Us",
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
+    },
+    "reviewList": {
+      "title": "Reviews",
+      "noReviews": "No reviews for this product.",
+      "outOfFive": "of 5"
+    },
+    "productGrid": {
+      "emptyTitle": "No products found",
+      "emptyDescription": "Try adjusting your filters or come back later."
     }
   },
   "common": {

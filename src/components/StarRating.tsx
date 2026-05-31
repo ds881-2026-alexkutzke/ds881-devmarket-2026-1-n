@@ -1,5 +1,10 @@
-// alterar pela issue de criação do componente
+import Rating from "@mui/material/Rating";
 
-export default function StarRating({ rating }: { rating: number }) {
-  return <div className="text-sm text-yellow-500">Nota: {rating} estrelas</div>;
+interface StarRatingProps {
+  rating: number;
+  size?: "small" | "medium" | "large";
+}
+
+export default function StarRating({ rating, size = "small" }: StarRatingProps) {
+  return <Rating value={rating} readOnly precision={0.1} size={size} />;
 }
