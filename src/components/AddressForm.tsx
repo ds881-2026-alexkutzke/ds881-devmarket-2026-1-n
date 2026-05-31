@@ -29,7 +29,7 @@ interface AddressFormProps {
   value: AddressFormValue;
   onChange: (value: AddressFormValue) => void;
   cepStatus: CepStatus;
-  numeroInputRef?: React.RefObject<HTMLInputElement>;
+  numeroInputRef?: React.RefObject<HTMLInputElement | null>;
 }
 
 export default function AddressForm({
