@@ -25,17 +25,20 @@ export default function CheckoutPage() {
   }, [formValue.cep, lookup]);
 
   useEffect(() => {
-    if (!address) return;
-    setFormValue((prev) => ({
-      ...prev,
+    if (address) {
+      numeroInputRef.current?.focus();
+    }
+  }, [address]);
+
+  const displayValue: AddressFormValue = {
+    ...formValue,
+    ...(address && {
       logradouro: address.logradouro,
-      complemento: address.complemento,
       bairro: address.bairro,
       cidade: address.localidade,
       estado: address.uf,
-    }));
-    numeroInputRef.current?.focus();
-  }, [address]);
+    }),
+  };
 
   const cepStatus: CepStatus = isLoading
     ? 'loading'
@@ -51,7 +54,7 @@ export default function CheckoutPage() {
     <main className="mx-auto max-w-2xl p-4">
       <h1 className="mb-4 text-xl font-semibold">{t('pages.checkout.title')}</h1>
       <AddressForm
-        value={formValue}
+        value={displayValue}
         onChange={setFormValue}
         cepStatus={cepStatus}
         numeroInputRef={numeroInputRef}
