@@ -1,5 +1,8 @@
 {
   "pages": {
+    "checkout": {
+      "title": "Finalizar Compra"
+    },
     "home": {
       "title": "PoC: Conexão com API",
       "loading": "Carregando prova de conceito...",
@@ -22,6 +25,7 @@
       "fields": {
         "cep": "CEP",
         "logradouro": "Logradouro",
+        "numero": "Número",
         "complemento": "Complemento",
         "bairro": "Bairro",
         "cidade": "Cidade",
