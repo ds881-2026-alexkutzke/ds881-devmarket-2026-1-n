@@ -108,6 +108,11 @@
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
     },
+    "reviewList": {
+      "title": "Avaliações",
+      "noReviews": "Nenhuma avaliação para este produto.",
+      "outOfFive": "de 5"
+    },
     "productGrid": {
       "emptyTitle": "Nenhum produto encontrado",
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
