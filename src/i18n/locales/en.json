@@ -1,5 +1,8 @@
 {
   "pages": {
+    "checkout": {
+      "title": "Checkout"
+    },
     "home": {
       "title": "PoC: API Connection",
       "loading": "Loading proof of concept...",
@@ -22,6 +25,7 @@
       "fields": {
         "cep": "ZIP code",
         "logradouro": "Street",
+        "numero": "Number",
         "complemento": "Complement",
         "bairro": "Neighborhood",
         "cidade": "City",
