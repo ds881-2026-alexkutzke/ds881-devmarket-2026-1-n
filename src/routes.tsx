@@ -3,7 +3,6 @@ import {
   createHashRouter,
   type RouteObject,
 } from "react-router-dom";
-
 import App from "@/App";
 import LandingPage from "@/pages/LandingPage";
 import MainLayoutPage from "@/pages/MainLayoutPage";
@@ -11,9 +10,9 @@ import HomePage from "@/pages/HomePage";
 import SearchPage from "@/pages/SearchPage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import CartPage from "@/pages/CartPage";
-import CheckoutPage from "@/pages/CheckoutPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 export const routes: RouteObject[] = [
   {
