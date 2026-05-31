@@ -1,9 +1,18 @@
-import { createHashRouter, type RouteObject } from "react-router-dom";
-
-import HomePage from "@/pages/HomePage";
-import NotFoundPage from "@/pages/NotFoundPage";
-import CheckoutPage from "@/pages/CheckoutPage";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  type RouteObject,
+} from "react-router-dom";
 import App from "@/App";
+import LandingPage from "@/pages/LandingPage";
+import MainLayoutPage from "@/pages/MainLayoutPage";
+import HomePage from "@/pages/HomePage";
+import SearchPage from "@/pages/SearchPage";
+import ProductDetailPage from "@/pages/ProductDetailPage";
+import CartPage from "@/pages/CartPage";
+import PaymentPage from "@/pages/PaymentPage";
+import NotFoundPage from "@/pages/NotFoundPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 export const routes: RouteObject[] = [
   {
@@ -12,11 +21,18 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <LandingPage />,
       },
       {
-        path: "checkout",
-        element: <CheckoutPage />,
+        element: <MainLayoutPage />,
+        children: [
+          { path: "home", element: <HomePage /> },
+          { path: "search", element: <SearchPage /> },
+          { path: "product/:id", element: <ProductDetailPage /> },
+          { path: "cart", element: <CartPage /> },
+          { path: "checkout", element: <CheckoutPage /> },
+          { path: "payment", element: <PaymentPage /> },
+        ],
       },
       {
         path: "*",
@@ -26,4 +42,6 @@ export const routes: RouteObject[] = [
   },
 ];
 
-export const router = createHashRouter(routes);
+export const router = import.meta.env.DEV
+  ? createBrowserRouter(routes)
+  : createHashRouter(routes);
