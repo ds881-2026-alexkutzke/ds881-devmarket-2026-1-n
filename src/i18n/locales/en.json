@@ -108,6 +108,11 @@
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
     },
+    "reviewList": {
+      "title": "Reviews",
+      "noReviews": "No reviews for this product.",
+      "outOfFive": "of 5"
+    },
     "productGrid": {
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
