@@ -4,9 +4,13 @@ import { useTranslation } from 'react-i18next';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+import SearchBar from '@/components/SearchBar';
+import useProducts from '@/hooks/useProducts';
+
 export default function Header() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { products, isLoading } = useProducts();
 
   return (
     <header className="w-full bg-gray-100 p-3 box-border">
@@ -28,12 +32,7 @@ export default function Header() {
         </div>
 
         <div className="flex-1 max-w-[420px]">
-          <input
-            type="text"
-            placeholder={t('components.header.searchPlaceholder')}
-            disabled
-            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm outline-none"
-          />
+          <SearchBar products={products} disabled={isLoading} />
         </div>
 
         <div className="flex items-center gap-5">

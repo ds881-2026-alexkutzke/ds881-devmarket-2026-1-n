@@ -70,6 +70,10 @@
       "home": "Home",
       "searchPlaceholder": "Search products..."
     },
+    "searchBar": {
+      "placeholder": "Search products...",
+      "searchAriaLabel": "Search"
+    },
     "pagination": {
       "nav": "Pagination",
       "previous": "Previous",
