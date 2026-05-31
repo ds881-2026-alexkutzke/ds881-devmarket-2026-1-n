@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { CartItem, CartState } from '../types/cart.types';
+import type { CartItem, CartState } from '@/types/cart.types';
 
 interface CartStore extends CartState {
   addItem: (item: CartItem) => void;
