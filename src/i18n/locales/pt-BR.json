@@ -120,6 +120,13 @@
     "productGrid": {
       "emptyTitle": "Nenhum produto encontrado",
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
+    },
+    "orderSummary": {
+      "title": "Resumo do pedido",
+      "subtotal": "Subtotal",
+      "shipping": "Frete",
+      "total": "Total",
+      "confirmButton": "Finalizar pagamento"
     }
   },
   "common": {

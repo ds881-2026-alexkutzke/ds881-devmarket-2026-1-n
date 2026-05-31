@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 export interface OrderTotals {
   subtotal: number;
@@ -16,26 +18,25 @@ interface OrderSummaryProps {
   onConfirm: () => void;
 }
 
-const formatCurrency = (value: number) =>
-  value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
 const OrderSummary = ({ totals, disabled = false, onConfirm }: OrderSummaryProps) => {
+  const { t } = useTranslation();
+
   return (
     <Paper variant="outlined" sx={{ p: 3 }}>
       <Typography variant="h6" gutterBottom>
-        Resumo do pedido
+        {t('components.orderSummary.title')}
       </Typography>
 
       <Box display="flex" justifyContent="space-between" mb={1}>
         <Typography variant="body2" color="text.secondary">
-          Subtotal
+          {t('components.orderSummary.subtotal')}
         </Typography>
         <Typography variant="body2">{formatCurrency(totals.subtotal)}</Typography>
       </Box>
 
       <Box display="flex" justifyContent="space-between" mb={2}>
         <Typography variant="body2" color="text.secondary">
-          Frete
+          {t('components.orderSummary.shipping')}
         </Typography>
         <Typography variant="body2">{formatCurrency(totals.shipping)}</Typography>
       </Box>
@@ -44,7 +45,7 @@ const OrderSummary = ({ totals, disabled = false, onConfirm }: OrderSummaryProps
 
       <Box display="flex" justifyContent="space-between" mb={3}>
         <Typography variant="subtitle1" fontWeight="bold">
-          Total
+          {t('components.orderSummary.total')}
         </Typography>
         <Typography variant="subtitle1" fontWeight="bold">
           {formatCurrency(totals.total)}
@@ -57,7 +58,7 @@ const OrderSummary = ({ totals, disabled = false, onConfirm }: OrderSummaryProps
         disabled={disabled}
         onClick={onConfirm}
       >
-        Finalizar pagamento
+        {t('components.orderSummary.confirmButton')}
       </Button>
     </Paper>
   );

@@ -120,6 +120,13 @@
     "productGrid": {
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
+    },
+    "orderSummary": {
+      "title": "Order summary",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "total": "Total",
+      "confirmButton": "Complete payment"
     }
   },
   "common": {
