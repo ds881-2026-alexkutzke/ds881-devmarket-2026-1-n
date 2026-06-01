@@ -1,3 +1,4 @@
+import React from "react";
 import {
   CircularProgress,
   FormControl,
@@ -17,6 +18,7 @@ export type CepStatus = "idle" | "loading" | "error" | "ok";
 export interface AddressFormValue {
   cep: string;
   logradouro: string;
+  numero: string;
   complemento: string;
   bairro: string;
   cidade: string;
@@ -27,12 +29,14 @@ interface AddressFormProps {
   value: AddressFormValue;
   onChange: (value: AddressFormValue) => void;
   cepStatus: CepStatus;
+  numeroInputRef?: React.RefObject<HTMLInputElement | null>;
 }
 
 export default function AddressForm({
   value,
   onChange,
   cepStatus,
+  numeroInputRef,
 }: AddressFormProps) {
   const { t } = useTranslation();
 
@@ -118,7 +122,7 @@ export default function AddressForm({
       </FormControl>
 
       <FormControl
-        className="sm:col-span-2"
+        className="sm:col-span-1"
         fullWidth
         size="small"
         variant="outlined"
@@ -133,6 +137,27 @@ export default function AddressForm({
           onChange={(event) =>
             handleFieldChange("logradouro", event.target.value)
           }
+        />
+      </FormControl>
+
+      <FormControl
+        className="sm:col-span-1"
+        fullWidth
+        size="small"
+        variant="outlined"
+      >
+        <InputLabel htmlFor="address-form-numero">
+          {t("components.addressForm.fields.numero")}
+        </InputLabel>
+        <OutlinedInput
+          id="address-form-numero"
+          label={t("components.addressForm.fields.numero")}
+          value={value.numero}
+          onChange={(event) =>
+            handleFieldChange("numero", event.target.value)
+          }
+          inputRef={numeroInputRef}
+          inputProps={{ inputMode: "numeric" }}
         />
       </FormControl>
 

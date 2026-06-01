@@ -1,5 +1,8 @@
 {
   "pages": {
+    "checkout": {
+      "title": "Finalizar Compra"
+    },
     "home": {
       "title": "PoC: Conexão com API",
       "loading": "Carregando prova de conceito...",
@@ -22,6 +25,7 @@
       "fields": {
         "cep": "CEP",
         "logradouro": "Logradouro",
+        "numero": "Número",
         "complemento": "Complemento",
         "bairro": "Bairro",
         "cidade": "Cidade",
@@ -107,6 +111,11 @@
       "contactTitle": "Fale Conosco",
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
+    },
+    "reviewList": {
+      "title": "Avaliações",
+      "noReviews": "Nenhuma avaliação para este produto.",
+      "outOfFive": "de 5"
     },
     "productGrid": {
       "emptyTitle": "Nenhum produto encontrado",
