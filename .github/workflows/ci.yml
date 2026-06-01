@@ -98,24 +98,21 @@ jobs:
   # JOB 3: BUILD
   # Gera os arquivos estáticos da aplicação. Faz upload do artefato para o job deployar no GitHub Pages.
   build:
-    name: Build
+    name: Build (Docker)
     needs: [lint, test, security]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: "npm"
+      - name: Build do estágio Docker
+        run: docker build --build-arg CI=true --target build -t devmarket-build .
 
-      - name: Instalar dependências
-        run: npm ci
-
-      - name: Build da aplicação (Vite)
-        run: npm run build
+      - name: Extrair dist do container
+        run: |
+          docker create --name devmarket-build-container devmarket-build
+          docker cp devmarket-build-container:/app/dist ./dist
+          docker rm -f devmarket-build-container
 
       - name: Configurar GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
