@@ -122,9 +122,9 @@
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
     },
     "productImageGallery": {
-      "galleryLabel": "Galeria de imagens do produto",
-      "thumbnailsLabel": "Miniaturas das imagens",
-      "imageLabel": "Imagem {{index}}"
+      "gallery": "Galeria de imagens do produto",
+      "thumbnails": "Miniaturas das imagens",
+      "thumbnail": "Imagem {{index}}"
     }
   },
   "common": {

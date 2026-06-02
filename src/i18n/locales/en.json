@@ -122,9 +122,9 @@
       "emptyDescription": "Try adjusting your filters or come back later."
     },
     "productImageGallery": {
-      "galleryLabel": "Product image gallery",
-      "thumbnailsLabel": "Image thumbnails",
-      "imageLabel": "Image {{index}}"
+      "gallery": "Product image gallery",
+      "thumbnails": "Image thumbnails",
+      "thumbnail": "Image {{index}}"
     }
   },
   "common": {
