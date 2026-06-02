@@ -11,6 +11,8 @@ CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 
 # Stage 3: build estático (gera dist/)
 FROM deps AS build
+ARG CI=false
+ENV CI=${CI}
 COPY . .
 RUN npm run build
 
