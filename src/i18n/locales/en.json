@@ -124,6 +124,11 @@
     "productGrid": {
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
+    },
+    "productImageGallery": {
+      "gallery": "Product image gallery",
+      "thumbnails": "Image thumbnails",
+      "thumbnail": "Image {{index}}"
     }
   },
   "common": {
