@@ -2,6 +2,7 @@ import type { Product } from "@/types/product.types";
 import DiscountBadge from "./DiscountBadge";
 import StarRating from "./StarRating";
 import PriceTag from "./PriceTag";
+import { calculateDiscountedPrice } from "@/utils/calculateDiscountedPrice";
 
 interface ProductCardProps {
   product: Product;
@@ -38,7 +39,13 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         </h3>
 
         <StarRating rating={product.rating} />
-        <PriceTag price={product.price} />
+        <PriceTag
+          originalPrice={product.price}
+          discountedPrice={calculateDiscountedPrice(
+            product.price,
+            product.discountPercentage,
+          )}
+        />
       </div>
     </div>
   );
