@@ -1,5 +1,11 @@
 {
   "pages": {
+    "cart": {
+      "empty": {
+        "title": "Seu carrinho está vazio",
+        "continueShopping": "Continuar comprando"
+      }
+    },
     "checkout": {
       "title": "Finalizar Compra"
     },
