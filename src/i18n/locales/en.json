@@ -46,6 +46,14 @@
         }
       }
     },
+    "cartSummary": {
+      "title": "Resumo do pedido",
+      "itemCount_one": "{{count}} item",
+      "itemCount_other": "{{count}} itens",
+      "total": "Total",
+      "savings": "Você economiza {{value}}",
+      "closeOrder": "Fechar pedido"
+    },
     "sortSelect": {
       "label": "Sort by",
       "options": {
