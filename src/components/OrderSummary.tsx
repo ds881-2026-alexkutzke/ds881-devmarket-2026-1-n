@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import type { OrderTotals } from "../types/order.types";
-import { formatCurrency } from "../utils/formatCurrency";
+import type { OrderTotals } from "@/types/order.types";
+import { formatCurrency } from "@/utils/formatCurrency";
 
 export interface OrderSummaryProps {
   totals: OrderTotals;
