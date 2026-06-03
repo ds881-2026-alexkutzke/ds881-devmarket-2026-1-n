@@ -1,5 +1,11 @@
 {
   "pages": {
+    "cart": {
+      "empty": {
+        "title": "Your cart is empty",
+        "continueShopping": "Continue shopping"
+      }
+    },
     "checkout": {
       "title": "Checkout"
     },
