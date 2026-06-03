@@ -70,6 +70,10 @@
       "home": "Início",
       "searchPlaceholder": "Buscar produtos..."
     },
+    "searchBar": {
+      "placeholder": "Buscar produtos...",
+      "searchAriaLabel": "Buscar"
+    },
     "pagination": {
       "nav": "Paginação",
       "previous": "Anterior",
