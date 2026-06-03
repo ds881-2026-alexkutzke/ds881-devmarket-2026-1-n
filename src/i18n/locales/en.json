@@ -1,5 +1,11 @@
 {
   "pages": {
+    "cart": {
+      "empty": {
+        "title": "Your cart is empty",
+        "continueShopping": "Continue shopping"
+      }
+    },
     "checkout": {
       "title": "Checkout"
     },
@@ -70,6 +76,10 @@
       "home": "Home",
       "searchPlaceholder": "Search products..."
     },
+    "searchBar": {
+      "placeholder": "Search products...",
+      "searchAriaLabel": "Search"
+    },
     "pagination": {
       "nav": "Pagination",
       "previous": "Previous",
@@ -124,6 +134,11 @@
     "carousel": {
       "previous": "Previous",
       "next": "Next"
+    },
+    "productImageGallery": {
+      "gallery": "Product image gallery",
+      "thumbnails": "Image thumbnails",
+      "thumbnail": "Image {{index}}"
     }
   },
   "common": {
