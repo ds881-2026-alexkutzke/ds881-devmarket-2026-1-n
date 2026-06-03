@@ -1,5 +1,14 @@
 {
   "pages": {
+    "cart": {
+      "empty": {
+        "title": "Your cart is empty",
+        "continueShopping": "Continue shopping"
+      }
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
     "home": {
       "title": "PoC: API Connection",
       "loading": "Loading proof of concept...",
@@ -26,6 +35,7 @@
       "fields": {
         "cep": "ZIP code",
         "logradouro": "Street",
+        "numero": "Number",
         "complemento": "Complement",
         "bairro": "Neighborhood",
         "cidade": "City",
@@ -70,6 +80,10 @@
       "home": "Home",
       "searchPlaceholder": "Search products..."
     },
+    "searchBar": {
+      "placeholder": "Search products...",
+      "searchAriaLabel": "Search"
+    },
     "pagination": {
       "nav": "Pagination",
       "previous": "Previous",
@@ -112,9 +126,19 @@
       "aboutProject": "About the project",
       "githubRepo": "GitHub Repository"
     },
+    "reviewList": {
+      "title": "Reviews",
+      "noReviews": "No reviews for this product.",
+      "outOfFive": "of 5"
+    },
     "productGrid": {
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
+    },
+    "productImageGallery": {
+      "gallery": "Product image gallery",
+      "thumbnails": "Image thumbnails",
+      "thumbnail": "Image {{index}}"
     }
   },
   "common": {

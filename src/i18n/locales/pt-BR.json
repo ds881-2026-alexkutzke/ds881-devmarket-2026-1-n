@@ -1,5 +1,14 @@
 {
   "pages": {
+    "cart": {
+      "empty": {
+        "title": "Seu carrinho está vazio",
+        "continueShopping": "Continuar comprando"
+      }
+    },
+    "checkout": {
+      "title": "Finalizar Compra"
+    },
     "home": {
       "title": "PoC: Conexão com API",
       "loading": "Carregando prova de conceito...",
@@ -26,6 +35,7 @@
       "fields": {
         "cep": "CEP",
         "logradouro": "Logradouro",
+        "numero": "Número",
         "complemento": "Complemento",
         "bairro": "Bairro",
         "cidade": "Cidade",
@@ -70,6 +80,10 @@
       "home": "Início",
       "searchPlaceholder": "Buscar produtos..."
     },
+    "searchBar": {
+      "placeholder": "Buscar produtos...",
+      "searchAriaLabel": "Buscar"
+    },
     "pagination": {
       "nav": "Paginação",
       "previous": "Anterior",
@@ -112,9 +126,19 @@
       "aboutProject": "Sobre o projeto",
       "githubRepo": "Repositório no GitHub"
     },
+    "reviewList": {
+      "title": "Avaliações",
+      "noReviews": "Nenhuma avaliação para este produto.",
+      "outOfFive": "de 5"
+    },
     "productGrid": {
       "emptyTitle": "Nenhum produto encontrado",
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
+    },
+    "productImageGallery": {
+      "gallery": "Galeria de imagens do produto",
+      "thumbnails": "Miniaturas das imagens",
+      "thumbnail": "Imagem {{index}}"
     }
   },
   "common": {
