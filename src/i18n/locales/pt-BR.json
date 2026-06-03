@@ -165,6 +165,10 @@
       "emptyTitle": "Nenhum produto encontrado",
       "emptyDescription": "Tente ajustar os filtros ou volte mais tarde."
     },
+    "carousel": {
+      "previous": "Anterior",
+      "next": "Próximo"
+    },
     "productImageGallery": {
       "gallery": "Galeria de imagens do produto",
       "thumbnails": "Miniaturas das imagens",
