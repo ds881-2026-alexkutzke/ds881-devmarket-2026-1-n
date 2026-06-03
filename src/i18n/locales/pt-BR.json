@@ -10,11 +10,38 @@
       "title": "Finalizar Compra"
     },
     "home": {
-      "title": "PoC: Conexão com API",
-      "loading": "Carregando prova de conceito...",
-      "error": "Erro ao carregar produto.",
+      "title": "Eleve o seu Dia a Dia",
+      "loading": "Carregando produtos...",
+      "error": "Erro ao carregar vitrine.",
       "priceLabel": "Preço:",
-      "exampleButton": "Exemplo Tailwind"
+      "exampleButton": "Exemplo Tailwind",
+      "categoriesTitle": "Categorias",
+      "trendingTitle": "Em Alta",
+      "featuredTitle": "Produtos em Destaque",
+      "seeAll": "Ver Tudo",
+      "hero": {
+        "badge": "Promoção sazonal",
+        "title": "Eleve o seu Dia a Dia",
+        "subtitle": "Descubra nossa coleção curada de itens essenciais premium para o seu estilo de vida moderno.",
+        "cta": "Comprar coleção",
+        "imageAlt": "Banner com o produto {{title}}"
+      },
+      "trending": {
+        "imageAlt": "Imagem do item em alta {{title}}"
+      },
+      "pagination": {
+        "previous": "Página anterior",
+        "next": "Próxima página",
+        "page": "Página {{current}} de {{total}}"
+      },
+      "empty": {
+        "title": "Nenhum produto encontrado",
+        "description": "Tente ajustar os filtros para visualizar mais itens.",
+        "action": "Limpar filtros"
+      },
+      "categories": {
+        "all": "Tudo"
+      }
     },
     "notFound": {
       "title": "Página não encontrada",
@@ -71,10 +98,17 @@
     "categoryChip": {
       "label": "Categoria: {{name}}"
     },
+    "productCard": {
+      "imageAlt": "Imagem do produto: {{title}}"
+    },
     "header": {
       "brand": "DevMarket",
       "home": "Início",
-      "searchPlaceholder": "Buscar produtos..."
+      "about": "Sobre",
+      "searchPlaceholder": "Buscar produtos...",
+      "homeIconLabel": "Ir para início",
+      "cartIconLabel": "Abrir carrinho",
+      "toggleLanguage": "Mudar idioma"
     },
     "searchBar": {
       "placeholder": "Buscar produtos...",
