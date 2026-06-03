@@ -1,14 +1,14 @@
 import {
   createBrowserRouter,
   createHashRouter,
+  Navigate,
   type RouteObject,
 } from "react-router-dom";
 import App from "@/App";
-import LandingPage from "@/pages/LandingPage";
 import MainLayoutPage from "@/pages/MainLayoutPage";
 import HomePage from "@/pages/HomePage";
 import SearchPage from "@/pages/SearchPage";
-import ProductDetailPage from "@/pages/ProductDetailPage";
+import ProductPage from "@/pages/ProductPage";
 import CartPage from "@/pages/CartPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -21,14 +21,14 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <LandingPage />,
+        element: <Navigate to="/home" replace />,
       },
       {
         element: <MainLayoutPage />,
         children: [
           { path: "home", element: <HomePage /> },
           { path: "search", element: <SearchPage /> },
-          { path: "product/:id", element: <ProductDetailPage /> },
+          { path: "product/:id", element: <ProductPage /> },
           { path: "cart", element: <CartPage /> },
           { path: "checkout", element: <CheckoutPage /> },
           { path: "payment", element: <PaymentPage /> },
