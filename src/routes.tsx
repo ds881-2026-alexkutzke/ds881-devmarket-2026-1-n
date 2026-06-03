@@ -13,7 +13,6 @@ import CartPage from "@/pages/CartPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import CheckoutPage from "@/pages/CheckoutPage";
-import TeamMemberCard from "./components/TeamMemberCard";
 import AboutTeamSection from "./components/AboutTeamSection";
 
 export const routes: RouteObject[] = [
