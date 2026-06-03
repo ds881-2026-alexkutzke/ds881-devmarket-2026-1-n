@@ -131,10 +131,12 @@
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
     },
-    "productImageGallery": {
-      "gallery": "Product image gallery",
-      "thumbnails": "Image thumbnails",
-      "thumbnail": "Image {{index}}"
+    "orderSummary": {
+      "title": "Order summary",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "total": "Total",
+      "confirmButton": "Complete payment"
     }
   },
   "common": {
