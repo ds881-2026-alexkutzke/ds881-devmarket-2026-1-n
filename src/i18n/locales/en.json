@@ -9,6 +9,14 @@
     "checkout": {
       "title": "Checkout"
     },
+    "payment": {
+      "documentTitle": "Payment | DevMarket",
+      "title": "Payment",
+      "summary": {
+        "total": "Total"
+      },
+      "confirm": "Confirm order"
+    },
     "home": {
       "title": "Elevate Your Everyday",
       "loading": "Loading products...",
@@ -50,6 +58,10 @@
     }
   },
   "components": {
+    "paymentMethodSelector": {
+      "label": "Payment method",
+      "pix": "PIX"
+    },
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
