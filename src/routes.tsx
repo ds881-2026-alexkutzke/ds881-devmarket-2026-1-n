@@ -1,6 +1,7 @@
 import {
   createBrowserRouter,
   createHashRouter,
+  Navigate,
   type RouteObject,
 } from "react-router-dom";
 import App from "@/App";
@@ -20,7 +21,7 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <Navigate to="/home" replace />,
       },
       {
         element: <MainLayoutPage />,
