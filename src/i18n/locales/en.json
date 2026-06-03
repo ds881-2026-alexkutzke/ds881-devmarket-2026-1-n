@@ -135,6 +135,13 @@
       "gallery": "Product image gallery",
       "thumbnails": "Image thumbnails",
       "thumbnail": "Image {{index}}"
+    },
+    "orderSummary": {
+      "title": "Order summary",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "total": "Total",
+      "confirmButton": "Finish payment"
     }
   },
   "common": {
