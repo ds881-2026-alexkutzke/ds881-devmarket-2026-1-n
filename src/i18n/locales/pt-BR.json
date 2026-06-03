@@ -9,6 +9,14 @@
     "checkout": {
       "title": "Finalizar Compra"
     },
+    "payment": {
+      "documentTitle": "Pagamento | DevMarket",
+      "title": "Pagamento",
+      "summary": {
+        "total": "Total"
+      },
+      "confirm": "Confirmar pedido"
+    },
     "home": {
       "title": "Eleve o seu Dia a Dia",
       "loading": "Carregando produtos...",
@@ -50,6 +58,10 @@
     }
   },
   "components": {
+    "paymentMethodSelector": {
+      "label": "Forma de pagamento",
+      "pix": "PIX"
+    },
     "languageToggle": {
       "toggleLanguage": "Mudar idioma"
     },
