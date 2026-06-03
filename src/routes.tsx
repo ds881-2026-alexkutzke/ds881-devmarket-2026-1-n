@@ -4,7 +4,6 @@ import {
   type RouteObject,
 } from "react-router-dom";
 import App from "@/App";
-import LandingPage from "@/pages/LandingPage";
 import MainLayoutPage from "@/pages/MainLayoutPage";
 import HomePage from "@/pages/HomePage";
 import SearchPage from "@/pages/SearchPage";
@@ -21,7 +20,7 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <LandingPage />,
+        element: <HomePage />,
       },
       {
         element: <MainLayoutPage />,
