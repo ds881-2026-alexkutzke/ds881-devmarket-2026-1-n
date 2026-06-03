@@ -13,8 +13,8 @@ export default function Header() {
   const { isLoading } = useProducts();
 
   return (
-    <header className="w-full bg-gray-100 p-3 box-border">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 border border-gray-200 bg-white px-6 py-4">
+    <header className="w-full bg-[--var(bg)] p-3 box-border">
+      <div className="mx-auto flex max-w-300 items-center justify-between gap-6 border border-[--var(bg)] bg-[--var(code-bg)] px-6 py-4">
         <div className="flex items-center gap-7">
           <span
             onClick={() => navigate("/home")}
@@ -31,7 +31,7 @@ export default function Header() {
           </span>
         </div>
 
-        <div className="flex-1 max-w-[420px]">
+        <div className="flex-1 max-w-105">
           <SearchBar disabled={isLoading} />
         </div>
 
