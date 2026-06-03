@@ -1,3 +1,4 @@
+import ButtonBase from "@mui/material/ButtonBase";
 import { useTranslation } from "react-i18next";
 import PriceTag from "@/components/PriceTag";
 import QuantitySelector from "@/components/QuantitySelector";
@@ -23,8 +24,7 @@ export default function ProductRow({
 
   return (
     <article className="flex flex-col gap-4 rounded-md border border-muted-300 bg-white p-4 shadow-sm sm:flex-row sm:items-center">
-      <button
-        type="button"
+      <ButtonBase
         onClick={onClickProduct}
         className="flex flex-1 cursor-pointer items-center gap-4 text-left focus:outline-none focus:ring-2 focus:ring-primary-500"
       >
@@ -51,7 +51,7 @@ export default function ProductRow({
             />
           </div>
         </div>
-      </button>
+      </ButtonBase>
 
       <div className="flex justify-end sm:w-auto">
         <QuantitySelector

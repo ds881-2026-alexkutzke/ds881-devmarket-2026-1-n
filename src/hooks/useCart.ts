@@ -1,6 +1,7 @@
 import { useMemo, useSyncExternalStore } from "react";
 import type { CartItem, CartState } from "@/types/cart.types";
 import type { Product } from "@/types/product.types";
+import { calculateDiscountedPrice } from "@/utils/calculateDiscountedPrice";
 
 const CART_STORAGE_KEY = "devmarket:cart";
 const CART_CHANGE_EVENT = "devmarket:cart-change";
@@ -14,18 +15,45 @@ function isCartItem(value: unknown): value is CartItem {
   if (!value || typeof value !== "object") return false;
 
   const item = value as CartItem;
+  const product = item.product;
 
   return (
     typeof item.quantity === "number" &&
     item.quantity > 0 &&
-    !!item.product &&
-    typeof item.product.id === "number" &&
-    typeof item.product.title === "string" &&
-    typeof item.product.thumbnail === "string" &&
-    typeof item.product.price === "number" &&
-    typeof item.product.discountPercentage === "number" &&
-    typeof item.product.stock === "number"
+    !!product &&
+    typeof product.id === "number" &&
+    typeof product.title === "string" &&
+    typeof product.thumbnail === "string" &&
+    typeof product.price === "number" &&
+    Number.isFinite(product.price) &&
+    typeof product.discountPercentage === "number" &&
+    Number.isFinite(product.discountPercentage) &&
+    typeof product.stock === "number" &&
+    Number.isFinite(product.stock)
   );
+}
+
+function clampQuantity(quantity: number, stock: number) {
+  const stockLimit = Math.max(0, Math.floor(stock));
+
+  if (stockLimit === 0) {
+    return 0;
+  }
+
+  return Math.min(stockLimit, Math.max(1, Math.floor(quantity)));
+}
+
+function normalizeCartItem(item: CartItem): CartItem | null {
+  const quantity = clampQuantity(item.quantity, item.product.stock);
+
+  if (quantity === 0) {
+    return null;
+  }
+
+  return {
+    ...item,
+    quantity,
+  };
 }
 
 function parseCartState(value: string | null): CartState {
@@ -39,7 +67,10 @@ function parseCartState(value: string | null): CartState {
     }
 
     return {
-      items: parsed.items.filter(isCartItem),
+      items: parsed.items
+        .filter(isCartItem)
+        .map(normalizeCartItem)
+        .filter((item): item is CartItem => item !== null),
     };
   } catch {
     return EMPTY_CART;
@@ -82,13 +113,15 @@ function subscribeToCartChanges(onChange: () => void) {
 }
 
 function upsertCartItem(items: CartItem[], product: Product, quantity: number) {
-  const nextQuantity = Math.max(1, quantity);
+  const nextQuantity = clampQuantity(quantity, product.stock);
   const currentItem = items.find((item) => item.product.id === product.id);
 
+  if (nextQuantity === 0) {
+    return items;
+  }
+
   if (!currentItem) {
-    const clampedQuantity = Math.min(product.stock, nextQuantity);
-    if (clampedQuantity <= 0) return items;
-    return [...items, { product, quantity: clampedQuantity }];
+    return [...items, { product, quantity: nextQuantity }];
   }
 
   return items.map((item) =>
@@ -96,7 +129,7 @@ function upsertCartItem(items: CartItem[], product: Product, quantity: number) {
       ? {
           ...item,
           product,
-          quantity: Math.min(product.stock, item.quantity + nextQuantity),
+          quantity: clampQuantity(item.quantity + nextQuantity, product.stock),
         }
       : item,
   );
@@ -111,14 +144,16 @@ function setCartItemQuantity(
     return items.filter((item) => item.product.id !== productId);
   }
 
-  return items.map((item) =>
-    item.product.id === productId
-      ? {
-          ...item,
-          quantity: Math.min(item.product.stock, quantity),
-        }
-      : item,
-  );
+  return items
+    .map((item) =>
+      item.product.id === productId
+        ? {
+            ...item,
+            quantity: clampQuantity(quantity, item.product.stock),
+          }
+        : item,
+    )
+    .filter((item) => item.quantity > 0);
 }
 
 export default function useCart() {
@@ -131,7 +166,13 @@ export default function useCart() {
 
   const itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
   const subtotal = state.items.reduce(
-    (total, item) => total + item.product.price * item.quantity,
+    (total, item) =>
+      total +
+      calculateDiscountedPrice(
+        item.product.price,
+        item.product.discountPercentage,
+      ) *
+        item.quantity,
     0,
   );
 
