@@ -39,9 +39,13 @@ jobs:
 
   # JOB 2: TEST
   # Roda os testes do Vitest (incluindo os testes de arquitetura) em modo single-run (sem watch)
+  # Gera relatório de cobertura de código
   test:
     name: Test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
@@ -55,8 +59,20 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Executar testes (Vitest, single-run)
-        run: npm run test -- --run
+      - name: Executar testes com cobertura
+        run: npm run test:coverage
+
+      - name: Upload do artefato de cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 30
+
+      - name: Comentar cobertura no PR
+        if: github.event_name == 'pull_request'
+        uses: davelosert/vitest-coverage-report-action@v2
 
   # JOB 2b: SECURITY
   # Verifica vulnerabilidades nas dependências via `npm audit`

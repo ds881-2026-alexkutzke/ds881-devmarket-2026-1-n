@@ -23,6 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
+# Coverage
+coverage/
+
 # Variáveis de ambiente
 .env
 .env.local
+
+# Test coverage
+coverage/
