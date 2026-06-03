@@ -8,7 +8,7 @@ import App from "@/App";
 import MainLayoutPage from "@/pages/MainLayoutPage";
 import HomePage from "@/pages/HomePage";
 import SearchPage from "@/pages/SearchPage";
-import ProductDetailPage from "@/pages/ProductDetailPage";
+import ProductPage from "@/pages/ProductPage";
 import CartPage from "@/pages/CartPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -28,7 +28,7 @@ export const routes: RouteObject[] = [
         children: [
           { path: "home", element: <HomePage /> },
           { path: "search", element: <SearchPage /> },
-          { path: "product/:id", element: <ProductDetailPage /> },
+          { path: "product/:id", element: <ProductPage /> },
           { path: "cart", element: <CartPage /> },
           { path: "checkout", element: <CheckoutPage /> },
           { path: "payment", element: <PaymentPage /> },
