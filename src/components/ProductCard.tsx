@@ -1,4 +1,5 @@
 import type { Product } from "@/types/product.types";
+import { useTranslation } from "react-i18next";
 import DiscountBadge from "./DiscountBadge";
 import StarRating from "./StarRating";
 import PriceTag from "./PriceTag";
@@ -10,6 +11,8 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onClick }: ProductCardProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       onClick={onClick}
@@ -24,7 +27,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         </div>
         <img
           src={product.thumbnail}
-          alt={`Imagem do produto: ${product.title}`}
+          alt={t("components.productCard.imageAlt", { title: product.title })}
           className="h-full w-full object-contain"
         />
       </div>
