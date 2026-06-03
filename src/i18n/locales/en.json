@@ -9,12 +9,47 @@
     "checkout": {
       "title": "Checkout"
     },
+    "payment": {
+      "documentTitle": "Payment | DevMarket",
+      "title": "Payment",
+      "summary": {
+        "total": "Total"
+      },
+      "confirm": "Confirm order"
+    },
     "home": {
-      "title": "PoC: API Connection",
-      "loading": "Loading proof of concept...",
-      "error": "Error loading product.",
+      "title": "Elevate Your Everyday",
+      "loading": "Loading products...",
+      "error": "Error loading showcase.",
       "priceLabel": "Price:",
-      "exampleButton": "Tailwind example"
+      "exampleButton": "Tailwind example",
+      "categoriesTitle": "Categories",
+      "trendingTitle": "Trending",
+      "featuredTitle": "Featured Products",
+      "seeAll": "See all",
+      "hero": {
+        "badge": "Seasonal promotion",
+        "title": "Elevate Your Everyday",
+        "subtitle": "Discover our curated collection of premium essentials for your modern lifestyle.",
+        "cta": "Shop collection",
+        "imageAlt": "Banner featuring product {{title}}"
+      },
+      "trending": {
+        "imageAlt": "Trending item image {{title}}"
+      },
+      "pagination": {
+        "previous": "Previous page",
+        "next": "Next page",
+        "page": "Page {{current}} of {{total}}"
+      },
+      "empty": {
+        "title": "No products found",
+        "description": "Try adjusting filters to see more items.",
+        "action": "Clear filters"
+      },
+      "categories": {
+        "all": "All"
+      }
     },
     "notFound": {
       "title": "Page not found",
@@ -29,6 +64,10 @@
     }
   },
   "components": {
+    "paymentMethodSelector": {
+      "label": "Payment method",
+      "pix": "PIX"
+    },
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
@@ -77,10 +116,17 @@
     "categoryChip": {
       "label": "Category: {{name}}"
     },
+    "productCard": {
+      "imageAlt": "Product image: {{title}}"
+    },
     "header": {
       "brand": "DevMarket",
       "home": "Home",
-      "searchPlaceholder": "Search products..."
+      "about": "About",
+      "searchPlaceholder": "Search products...",
+      "homeIconLabel": "Go to home",
+      "cartIconLabel": "Open cart",
+      "toggleLanguage": "Switch language"
     },
     "searchBar": {
       "placeholder": "Search products...",
