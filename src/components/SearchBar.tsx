@@ -56,6 +56,25 @@ export default function SearchBar({
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         disabled={disabled}
+        sx={{
+          "& .MuiOutlinedInput-root": {
+            color: "var(--text)",
+            backgroundColor: "var(--bg)",
+            "& fieldset": {
+              borderColor: "var(--border)",
+            },
+            "&:hover fieldset": {
+              borderColor: "var(--color-primary-300)",
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "var(--color-primary-500)",
+            },
+          },
+          "& .MuiInputBase-input::placeholder": {
+            color: "var(--text)",
+            opacity: 0.6,
+          },
+        }}
         slotProps={{
           input: {
             endAdornment: (
@@ -64,6 +83,7 @@ export default function SearchBar({
                   onClick={forceSearch}
                   aria-label={t("components.searchBar.searchAriaLabel")}
                   edge="end"
+                  sx={{ color: "var(--text)" }}
                 >
                   <SearchIcon />
                 </IconButton>
