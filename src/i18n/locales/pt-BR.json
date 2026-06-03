@@ -23,6 +23,15 @@
     }
   },
   "components": {
+    "aboutTeamSection": {
+      "title": "Equipe de Liderança",
+      "roles": {
+        "sarah": "CEO & Fundadora",
+        "david": "CTO",
+        "elena": "Diretora de Design",
+        "marcus": "Head de Marketing"
+      }
+    },
     "languageToggle": {
       "toggleLanguage": "Mudar idioma"
     },
