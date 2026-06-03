@@ -12,7 +12,7 @@ import ProductDetailPage from "@/pages/ProductDetailPage";
 import CartPage from "@/pages/CartPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
-import CheckoutPage from "./pages/CheckoutPage";
+import CheckoutPage from "@/pages/CheckoutPage";
 
 export const routes: RouteObject[] = [
   {
