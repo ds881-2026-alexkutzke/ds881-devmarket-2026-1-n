@@ -13,6 +13,7 @@ import CartPage from "@/pages/CartPage";
 import PaymentPage from "@/pages/PaymentPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import CheckoutPage from "@/pages/CheckoutPage";
+import AboutTeamSection from "./components/AboutTeamSection";
 
 export const routes: RouteObject[] = [
   {
@@ -32,6 +33,7 @@ export const routes: RouteObject[] = [
           { path: "cart", element: <CartPage /> },
           { path: "checkout", element: <CheckoutPage /> },
           { path: "payment", element: <PaymentPage /> },
+          { path: "section", element: <AboutTeamSection /> } // para teste,
         ],
       },
       {
