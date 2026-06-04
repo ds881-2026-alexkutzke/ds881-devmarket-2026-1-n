@@ -101,6 +101,23 @@
     "languageToggle": {
       "toggleLanguage": "Switch language"
     },
+    "aboutValuesSection": {
+      "title": "About Us",
+      "values": {
+        "quality": {
+          "title": "Unquestionable Quality",
+          "description": "We hand-pick every product to ensure durability and excellence in every detail."
+        },
+        "experience": {
+          "title": "Frictionless Experience",
+          "description": "From search to checkout, a fast, intuitive and hassle-free shopping journey."
+        },
+        "growth": {
+          "title": "Sustainable Growth",
+          "description": "We grow alongside our customers and partners, with responsibility and a long-term vision."
+        }
+      }
+    },
     "addressForm": {
       "ariaLabel": "Address form",
       "fields": {
