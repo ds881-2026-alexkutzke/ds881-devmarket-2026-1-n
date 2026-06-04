@@ -1,16 +1,23 @@
-import { useQuery } from '@tanstack/react-query';
+import { useState, useEffect } from 'react';
 import { categoryService } from '@/services/categoryService';
+import type { Category } from '../types/category.types';
 
 export function useCategories() {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['categories'],
-    queryFn: () => categoryService.getAll(),
-    staleTime: 1000 * 60 * 5, // Cache por 5 minutos para performance
-  });
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  return {
-    categories: data ?? [],
-    isLoading,
-    error,
-  };
+  useEffect(() => {
+    categoryService.getAll()
+      .then((data: Category[]) => {
+        setCategories(data);
+        setIsLoading(false);
+      })
+      .catch((err: Error) => {
+        setError(err.message);
+        setIsLoading(false);
+      });
+  }, []);
+
+  return { categories, isLoading, error };
 }
