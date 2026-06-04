@@ -8,23 +8,14 @@ let categoriesCache: Category[] | null = null;
 export async function getCategories(): Promise<Category[]> {
   if (categoriesCache) return categoriesCache;
 
-  try {
-    const data = await apiFetch<Category[]>('/products/categories');
-    categoriesCache = data;
-    return data;
-  } catch (error) {
-    
-    throw error;
-  }
+  const data = await apiFetch<Category[]>('/products/categories');
+  categoriesCache = data;
+  return data;
 }
 
 export async function getProductsByCategory(category: string): Promise<Product[]> {
-  try {
-    return await apiFetch<Product[]>(`/products/category/${category}`);
-  } catch (error) {
-   
-    throw error;
-  }
+  // Removido o try/catch 
+  return await apiFetch<Product[]>(`/products/category/${category}`);
 }
 
 // Para manter compatibilidade
