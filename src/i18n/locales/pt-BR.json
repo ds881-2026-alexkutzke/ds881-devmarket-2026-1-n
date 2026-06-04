@@ -1,9 +1,45 @@
 {
   "pages": {
     "cart": {
+      "title": "Seu carrinho",
+      "itemsCount": "{{count}} itens",
+      "unitPrice": "Preço unitário",
+      "itemImageAlt": "Imagem de {{title}}",
+      "clear": "Limpar carrinho",
+      "summary": {
+        "title": "Resumo do pedido",
+        "subtotal": "Subtotal",
+        "total": "Total",
+        "checkout": "Finalizar compra"
+      },
       "empty": {
         "title": "Seu carrinho está vazio",
         "continueShopping": "Continuar comprando"
+      }
+    },
+    "search": {
+      "title": "Buscar produtos",
+      "resultsFor": "Resultados para \"{{query}}\"",
+      "resultsCount": "{{count}} produtos encontrados",
+      "filtersTitle": "Filtros",
+      "categoryLabel": "Categoria",
+      "allCategories": "Todas as categorias",
+      "priceTitle": "Preço",
+      "ratingTitle": "Avaliação",
+      "clearFilters": "Limpar filtros"
+    },
+    "product": {
+      "loading": "Carregando produto...",
+      "back": "Voltar para a busca",
+      "reviewsCount": "{{count}} avaliações",
+      "inStock": "{{count}} em estoque",
+      "outOfStock": "Produto esgotado",
+      "quantity": "Quantidade",
+      "addToCart": "Adicionar ao carrinho",
+      "notFound": {
+        "title": "Produto não encontrado",
+        "description": "O produto que você procura não existe ou foi removido.",
+        "back": "Voltar para a busca"
       }
     },
     "checkout": {

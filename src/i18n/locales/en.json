@@ -1,9 +1,45 @@
 {
   "pages": {
     "cart": {
+      "title": "Your cart",
+      "itemsCount": "{{count}} items",
+      "unitPrice": "Unit price",
+      "itemImageAlt": "Image of {{title}}",
+      "clear": "Clear cart",
+      "summary": {
+        "title": "Order summary",
+        "subtotal": "Subtotal",
+        "total": "Total",
+        "checkout": "Checkout"
+      },
       "empty": {
         "title": "Your cart is empty",
         "continueShopping": "Continue shopping"
+      }
+    },
+    "search": {
+      "title": "Search products",
+      "resultsFor": "Results for \"{{query}}\"",
+      "resultsCount": "{{count}} products found",
+      "filtersTitle": "Filters",
+      "categoryLabel": "Category",
+      "allCategories": "All categories",
+      "priceTitle": "Price",
+      "ratingTitle": "Rating",
+      "clearFilters": "Clear filters"
+    },
+    "product": {
+      "loading": "Loading product...",
+      "back": "Back to search",
+      "reviewsCount": "{{count}} reviews",
+      "inStock": "{{count}} in stock",
+      "outOfStock": "Out of stock",
+      "quantity": "Quantity",
+      "addToCart": "Add to cart",
+      "notFound": {
+        "title": "Product not found",
+        "description": "The product you are looking for does not exist or has been removed.",
+        "back": "Back to search"
       }
     },
     "checkout": {
