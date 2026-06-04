@@ -1,4 +1,4 @@
-import { apiFetch } from './apiService';
+import { apiFetch } from '@/services/apiService';
 import type { Category } from '../types/category.types';
 import type { Product } from '../types/product.types';
 
@@ -13,7 +13,7 @@ export async function getCategories(): Promise<Category[]> {
     categoriesCache = data;
     return data;
   } catch (error) {
-    console.error('Erro ao buscar categorias:', error);
+    
     throw error;
   }
 }
@@ -22,7 +22,7 @@ export async function getProductsByCategory(category: string): Promise<Product[]
   try {
     return await apiFetch<Product[]>(`/products/category/${category}`);
   } catch (error) {
-    console.error(`Erro ao buscar produtos da categoria ${category}:`, error);
+   
     throw error;
   }
 }
