@@ -1,6 +1,6 @@
 import { apiFetch } from '@/services/apiService';
-import type { Category } from '../types/category.types';
-import type { Product } from '../types/product.types';
+import type { Category } from '@/types/category.types';
+import type { Product } from '@/types/product.types';
 
 // Cache em variável de módulo
 let categoriesCache: Category[] | null = null;
