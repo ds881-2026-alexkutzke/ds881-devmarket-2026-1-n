@@ -65,6 +65,23 @@
     "languageToggle": {
       "toggleLanguage": "Mudar idioma"
     },
+    "aboutValuesSection": {
+      "title": "Sobre Nós",
+      "values": {
+        "quality": {
+          "title": "Qualidade Inquestionável",
+          "description": "Selecionamos a dedo cada produto para garantir durabilidade e excelência em todos os detalhes."
+        },
+        "experience": {
+          "title": "Experiência Sem Atritos",
+          "description": "Da busca ao checkout, uma jornada de compra rápida, intuitiva e sem complicações."
+        },
+        "growth": {
+          "title": "Crescimento Sustentável",
+          "description": "Crescemos lado a lado com nossos clientes e parceiros, com responsabilidade e visão de longo prazo."
+        }
+      }
+    },
     "addressForm": {
       "ariaLabel": "Formulário de endereço",
       "fields": {
