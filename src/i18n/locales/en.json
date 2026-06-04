@@ -213,6 +213,10 @@
       "emptyTitle": "No products found",
       "emptyDescription": "Try adjusting your filters or come back later."
     },
+    "carousel": {
+      "previous": "Previous",
+      "next": "Next"
+    },
     "productImageGallery": {
       "gallery": "Product image gallery",
       "thumbnails": "Image thumbnails",
