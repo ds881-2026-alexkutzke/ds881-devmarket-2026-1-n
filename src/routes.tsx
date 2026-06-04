@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  createHashRouter,
-  Navigate,
-  type RouteObject,
-} from "react-router-dom";
+import { createBrowserRouter, Navigate, type RouteObject } from "react-router-dom";
 import App from "@/App";
 import MainLayoutPage from "@/pages/MainLayoutPage";
 import HomePage from "@/pages/HomePage";
@@ -42,6 +37,8 @@ export const routes: RouteObject[] = [
   },
 ];
 
-export const router = import.meta.env.DEV
-  ? createBrowserRouter(routes)
-  : createHashRouter(routes);
+// Remove a barra final do base do Vite ("/ds881-devmarket-2026-1-n/" -> "/ds881-devmarket-2026-1-n").
+// Em dev o base é "/", resultando em "" -> usamos "/" como fallback.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
+export const router = createBrowserRouter(routes, { basename });
