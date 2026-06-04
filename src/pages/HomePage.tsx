@@ -12,6 +12,7 @@ import {
 import IconButton from "@mui/material/IconButton";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import CategoryChip from "@/components/CategoryChip";
 import EmptyState from "@/components/EmptyState";
 import ErrorState from "@/components/ErrorState";
@@ -64,6 +65,7 @@ function getCategoryIcon(slug: string) {
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -248,6 +250,7 @@ const HomePage = () => {
 
                   <button
                     type="button"
+                    onClick={() => navigate("/search")}
                     className="mt-2 w-fit rounded-md bg-primary-700 px-5 py-2 text-sm font-semibold text-white transition hover:bg-primary-500"
                   >
                     {t("pages.home.hero.cta")}
@@ -261,14 +264,23 @@ const HomePage = () => {
                 <h2 className="m-0 text-3xl font-semibold text-muted-950">
                   {t("pages.home.trendingTitle")}
                 </h2>
-                <button type="button" className="text-sm font-medium text-primary-700">
+                <button
+                  type="button"
+                  onClick={() => navigate("/search")}
+                  className="text-sm font-medium text-primary-700"
+                >
                   {t("pages.home.seeAll")}
                 </button>
               </div>
 
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                 {spotlightProducts.map((product) => (
-                  <article key={product.id} className="flex flex-col items-center gap-2 text-center">
+                  <button
+                    key={product.id}
+                    type="button"
+                    onClick={() => navigate(`/product/${product.id}`)}
+                    className="flex cursor-pointer flex-col items-center gap-2 text-center transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  >
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-muted-50 p-3">
                       <img
                         src={product.thumbnail}
@@ -277,7 +289,7 @@ const HomePage = () => {
                       />
                     </div>
                     <p className="text-xs font-medium text-muted-950">{product.title}</p>
-                  </article>
+                  </button>
                 ))}
               </div>
             </section>
@@ -303,7 +315,11 @@ const HomePage = () => {
                 <>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {featuredPagination.items.map((product) => (
-                      <ProductCard key={product.id} product={product} />
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        onClick={() => navigate(`/product/${product.id}`)}
+                      />
                     ))}
                   </div>
 
