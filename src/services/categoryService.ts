@@ -1,0 +1,25 @@
+import { apiFetch } from '@/services/apiService';
+import type { Category } from '@/types/category.types';
+import type { Product } from '@/types/product.types';
+
+// Cache em variável de módulo
+let categoriesCache: Category[] | null = null;
+
+export async function getCategories(): Promise<Category[]> {
+  if (categoriesCache) return categoriesCache;
+
+  const data = await apiFetch<Category[]>('/products/categories');
+  categoriesCache = data;
+  return data;
+}
+
+export async function getProductsByCategory(category: string): Promise<Product[]> {
+  // Removido o try/catch 
+  return await apiFetch<Product[]>(`/products/category/${category}`);
+}
+
+// Para manter compatibilidade
+export const categoryService = {
+  getAll: getCategories,
+  getByCategory: getProductsByCategory
+};
