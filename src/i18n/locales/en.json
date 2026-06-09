@@ -1,5 +1,12 @@
 {
   "pages": {
+    "about": {
+      "hero": {
+        "title": "Redefining the digital market.",
+        "description": "We believe in a world where quality meets convenience. Market was founded on the principle that finding premium products should be an effortless, curated experience.",
+        "imageAlt": "Modern corporate office with large windows, meeting tables and plants in the background"
+      }
+    },
     "cart": {
       "title": "Your cart",
       "itemsCount": "{{count}} items",

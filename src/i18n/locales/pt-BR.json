@@ -1,5 +1,12 @@
 {
   "pages": {
+    "about": {
+      "hero": {
+        "title": "Redefinindo o mercado digital.",
+        "description": "Acreditamos em um mundo onde a qualidade encontra a conveniência. O Market foi fundado no princípio de que encontrar produtos premium deve ser uma experiência sem esforço e curada.",
+        "imageAlt": "Escritório corporativo moderno com grandes janelas, mesas de reunião e plantas ao fundo"
+      }
+    },
     "cart": {
       "title": "Seu carrinho",
       "itemsCount": "{{count}} itens",
